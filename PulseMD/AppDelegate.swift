@@ -7,15 +7,38 @@
 //
 
 import UIKit
+import Parse
+import IQKeyboardManagerSwift
+import ReachabilitySwift
+
+let APP_KEY = "ed8289d2-2aea-4764-ab05-6779733fa19d"
+let TENNANT_ID = "62c7137b-8c89-48e3-8317-cd3549d3f4e8"
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.enableLocalDatastore()
+        IQKeyboardManager.sharedManager().enable = true
+        // Initialize Parse.
+        let err: NSErrorPointer = nil
+        MokiManage.sharedManager().delegate = self
+        //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, enableASM: true, enableAEM: true, asmSettingsFileName: "SettingsSchema.json", error: err)
+        
+        
+        //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, error: err)
+        
+        Parse.setApplicationId("KPiWhoD68L6zYIRHEBnfebYlopbvzc64dd2wzENa",
+                               clientKey: "1pjkH1AsWjCvf2st0SQB5MjLb5sMuYmNxMnKigRd")
+
+
+        
+        
+        
         return true
     }
 

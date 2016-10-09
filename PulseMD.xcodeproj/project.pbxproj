@@ -46,6 +46,7 @@
 		BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulseMD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBB3172A86F3FA29BC8D315 /* Pods-PulseMDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5F840AD46CC92DB6224C9B /* Pods-PulseMDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDUITests/Pods-PulseMDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED28B1311DA9F2E70073513E /* Bridge-header-file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-header-file.h"; sourceTree = "<group>"; };
 		ED6DD8831DA9BE1900718E73 /* PulseMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED6DD8881DA9BE1900718E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */,
+				ED28B1311DA9F2E70073513E /* Bridge-header-file.h */,
 				ED6DD8881DA9BE1900718E73 /* ViewController.swift */,
 				ED6DD88A1DA9BE1900718E73 /* Main.storyboard */,
 				ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */,
@@ -591,6 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PulseMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -649,6 +652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/josephrichardson/Documents/Xcode Workspace/PulseMDRefactor/PulseMD/PulseMD/Bridge-header-file.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -659,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PulseMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -717,6 +722,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/josephrichardson/Documents/Xcode Workspace/PulseMDRefactor/PulseMD/PulseMD/Bridge-header-file.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

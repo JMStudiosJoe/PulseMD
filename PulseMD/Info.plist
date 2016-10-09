@@ -41,5 +41,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>appId</key>
+	<string>f9ef33ee-3ae6-4b54-ab4b-6d755998f6fd</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>May I have your location please?</string>
+	<key>certType</key>
+	<dict>
+		<key>enterprise</key>
+		<true/>
+		<key>sandbox</key>
+		<false/>
+		<key>store</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
