@@ -1,26 +1,120 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCi-Kj-RKc">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-nW-gyw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OX0-4G-S9E"/>
+                                    <constraint firstAttribute="width" constant="113" id="q1S-Mm-fqO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="BjH-yO-P25"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eCi-Kj-RKc" secondAttribute="bottom" constant="10" id="EYr-HD-tFC"/>
+                            <constraint firstItem="gxi-nW-gyw" firstAttribute="centerX" secondItem="eCi-Kj-RKc" secondAttribute="centerX" id="LXB-52-2iZ"/>
+                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="top" secondItem="gxi-nW-gyw" secondAttribute="bottom" constant="-207" id="ReQ-kO-lbW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eCi-Kj-RKc" secondAttribute="trailing" constant="10" id="iFo-FZ-4Oz"/>
+                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qiP-2j-LKY"/>
+                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="zsl-jn-0CY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseQuestionUIView" destination="eCi-Kj-RKc" id="KDV-zY-KWS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Star Rating View Controller-->
+        <scene sceneID="pOC-v0-1zR">
+            <objects>
+                <viewController id="DNe-Vg-5pA" customClass="StarRatingViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UvT-Lf-Ga3"/>
+                        <viewControllerLayoutGuide type="bottom" id="vox-eo-GBI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NbC-o4-wf5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StarRating ViewControlleer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh2-KL-IHX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QpZ-Xb-ZZM"/>
+                                    <constraint firstAttribute="width" constant="207" id="g6w-Hx-a4P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qh2-KL-IHX" firstAttribute="top" secondItem="UvT-Lf-Ga3" secondAttribute="bottom" constant="251" id="TFm-cY-xN7"/>
+                            <constraint firstItem="Qh2-KL-IHX" firstAttribute="centerX" secondItem="NbC-o4-wf5" secondAttribute="centerX" id="YEj-fE-e78"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yal-GV-2mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="892"/>
+        </scene>
+        <!--Providers View Controller-->
+        <scene sceneID="Shh-2b-FXE">
+            <objects>
+                <viewController id="fV7-Qf-yoa" customClass="ProvidersViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NDu-cX-Gpp"/>
+                        <viewControllerLayoutGuide type="bottom" id="QIP-cm-LlR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="36u-eb-nfU">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Providers View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDZ-Yz-RQj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NWg-K4-fEG"/>
+                                    <constraint firstAttribute="width" constant="194" id="mMv-Kr-e4T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZDZ-Yz-RQj" firstAttribute="top" secondItem="NDu-cX-Gpp" secondAttribute="bottom" constant="335" id="2IB-8H-Ady"/>
+                            <constraint firstItem="ZDZ-Yz-RQj" firstAttribute="centerX" secondItem="36u-eb-nfU" secondAttribute="centerX" id="QZ7-r9-4q2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eI0-JN-ABb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="901"/>
         </scene>
     </scenes>
 </document>
