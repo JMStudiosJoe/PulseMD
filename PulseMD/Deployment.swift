@@ -26,8 +26,6 @@ extension Deployment {
                 print ( error )
             }
             else if let object = object {
-                print ( object )
-                print ( "--------------------------------" )
                 
                 let surveyObject: Survey = object["survey"] as! Survey
                 let locationObject: Location = object["location"] as! Location

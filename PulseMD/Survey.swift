@@ -28,6 +28,7 @@ extension Survey {
         let query = Survey.query()!
         query.whereKey( "objectId", equalTo: objectId )
         query.getFirstObjectInBackground {( object, error ) in
+            
             if let error = error {
                 print ( error )
             }
@@ -35,8 +36,6 @@ extension Survey {
                 
                 let relation: PFRelation<PFObject> = object["questions"] as! PFRelation<PFObject>
                 Question.fetchSurveyQuestions( rel: relation )
-                let x = Question()
-                print ( x )
             }
         }
     }

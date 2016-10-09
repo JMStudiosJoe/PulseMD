@@ -46,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
     func configureParse() {
         Survey.registerSubclass()
         Deployment.registerSubclass()
+        Question.registerSubclass()
+        Provider.registerSubclass()
+        Location.registerSubclass()
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any])

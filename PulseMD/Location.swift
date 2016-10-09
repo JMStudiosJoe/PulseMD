@@ -30,7 +30,10 @@ extension Location {
             if error == nil
             {
                 if let objects = objects {
-                    print ( objects )
+                    
+                    let location = objects[0] as! Location
+                    deployedLocation = location
+                    Provider.fetchProviders( location: location )
                 }
             }
             else

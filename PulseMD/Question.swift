@@ -22,15 +22,16 @@ class Question: PFObject, PFSubclassing {
         return "Question"
     }
     override class func initialize() {
-        print ( "do a bunch of self stuff?" )
-    
-        //self.registerSubclass()
+        
     }
-    init( question: String, position: NSNumber, type: String ) {
+    init( objectId: String, question: String, position: NSNumber, type: String, multi: [String]?, choice: [Bool]? ) {
         super.init()
+        self.objectId = objectId
         self.question = question
         self.position = position
         self.type = type
+        self.multi = multi
+        self.choice = choice
         
     }
     
@@ -41,21 +42,37 @@ class Question: PFObject, PFSubclassing {
 }
 
 extension Question {
+    
     static func fetchSurveyQuestions( rel: PFRelation<PFObject> ) {
+        
+        var surveyQuestions: [Question] = []
         let query = rel.query()
+        
         query.order(byAscending: "position")
+        
         query.findObjectsInBackground{(objects: [PFObject]?, error: Error?) -> Void in
             
             if error == nil {
+                
                 for question in objects! {
                     
-                    let newQuestion = Question(question: question["question"] as! String, position: question["position"] as! NSNumber, type: question["type"] as! String)
+                    let objcId = question.objectId!
+                    let questionText: String = question["question"] as! String
+                    let position: NSNumber = question["position"] as! NSNumber
+                    let multi: [String]? = question["multi"] as? [String]
+                    let type: String = question["type"] as! String
+                    let choice: [Bool]? = question["choice"] as? [Bool]
                     
-                    consoleLineSeparate()
-                    print ( newQuestion )
-                    
+                    let newQuestion = Question( objectId: objcId,
+                        question: questionText,
+                        position: position,
+                        type: type,
+                        multi: multi,
+                        choice: choice )
+
+                    surveyQuestions.append(newQuestion)
                 }
-                //surveyQuestions = objects
+                deployedSurveyQuestions = surveyQuestions
             }
             else {
                 // Log details of the failure
