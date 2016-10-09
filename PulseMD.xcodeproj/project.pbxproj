@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A13678CD9CB4FC2A27729520 /* Pods_PulseMD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */; };
+		DC9D6B01F0495E56248E1336 /* Pods_PulseMDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8C7F0B2AFDEF5FA49681A5 /* Pods_PulseMDUITests.framework */; };
+		DCC372D7DEF2E414EE83FB26 /* Pods_PulseMDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD323C23AC29995623504BA /* Pods_PulseMDTests.framework */; };
+		ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */; };
+		ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8881DA9BE1900718E73 /* ViewController.swift */; };
+		ED6DD88C1DA9BE1900718E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88A1DA9BE1900718E73 /* Main.storyboard */; };
+		ED6DD88E1DA9BE1900718E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */; };
+		ED6DD8911DA9BE1900718E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88F1DA9BE1900718E73 /* LaunchScreen.storyboard */; };
+		ED6DD89C1DA9BE1900718E73 /* PulseMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD89B1DA9BE1900718E73 /* PulseMDTests.swift */; };
+		ED6DD8A71DA9BE1900718E73 /* PulseMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED6DD8981DA9BE1900718E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED6DD87B1DA9BE1900718E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED6DD8821DA9BE1900718E73;
+			remoteInfo = PulseMD;
+		};
+		ED6DD8A31DA9BE1900718E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED6DD87B1DA9BE1900718E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED6DD8821DA9BE1900718E73;
+			remoteInfo = PulseMD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		102569EB4A47E908B567F498 /* Pods-PulseMD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMD/Pods-PulseMD.debug.xcconfig"; sourceTree = "<group>"; };
+		3CD323C23AC29995623504BA /* Pods_PulseMDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulseMDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		540424CE84BC6EBC90989636 /* Pods-PulseMD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMD.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMD/Pods-PulseMD.release.xcconfig"; sourceTree = "<group>"; };
+		59986E7590BD9387D42F984F /* Pods-PulseMDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDUITests/Pods-PulseMDUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F651428638B524C85B62DC6 /* Pods-PulseMDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D8C7F0B2AFDEF5FA49681A5 /* Pods_PulseMDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulseMDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulseMD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDBB3172A86F3FA29BC8D315 /* Pods-PulseMDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB5F840AD46CC92DB6224C9B /* Pods-PulseMDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDUITests/Pods-PulseMDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED6DD8831DA9BE1900718E73 /* PulseMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED6DD8881DA9BE1900718E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED6DD88B1DA9BE1900718E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED6DD8901DA9BE1900718E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED6DD8921DA9BE1900718E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED6DD8971DA9BE1900718E73 /* PulseMDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulseMDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6DD89B1DA9BE1900718E73 /* PulseMDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseMDTests.swift; sourceTree = "<group>"; };
+		ED6DD89D1DA9BE1900718E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED6DD8A21DA9BE1900718E73 /* PulseMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulseMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseMDUITests.swift; sourceTree = "<group>"; };
+		ED6DD8A81DA9BE1900718E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED6DD8801DA9BE1900718E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13678CD9CB4FC2A27729520 /* Pods_PulseMD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6DD8941DA9BE1900718E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC372D7DEF2E414EE83FB26 /* Pods_PulseMDTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6DD89F1DA9BE1900718E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9D6B01F0495E56248E1336 /* Pods_PulseMDUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		587FFADAB8FAC51AC4F961DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */,
+				3CD323C23AC29995623504BA /* Pods_PulseMDTests.framework */,
+				9D8C7F0B2AFDEF5FA49681A5 /* Pods_PulseMDUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64299460CFBA811FD08CC53A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				102569EB4A47E908B567F498 /* Pods-PulseMD.debug.xcconfig */,
+				540424CE84BC6EBC90989636 /* Pods-PulseMD.release.xcconfig */,
+				DDBB3172A86F3FA29BC8D315 /* Pods-PulseMDTests.debug.xcconfig */,
+				6F651428638B524C85B62DC6 /* Pods-PulseMDTests.release.xcconfig */,
+				59986E7590BD9387D42F984F /* Pods-PulseMDUITests.debug.xcconfig */,
+				EB5F840AD46CC92DB6224C9B /* Pods-PulseMDUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED6DD87A1DA9BE1900718E73 = {
+			isa = PBXGroup;
+			children = (
+				ED6DD8851DA9BE1900718E73 /* PulseMD */,
+				ED6DD89A1DA9BE1900718E73 /* PulseMDTests */,
+				ED6DD8A51DA9BE1900718E73 /* PulseMDUITests */,
+				ED6DD8841DA9BE1900718E73 /* Products */,
+				64299460CFBA811FD08CC53A /* Pods */,
+				587FFADAB8FAC51AC4F961DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED6DD8841DA9BE1900718E73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED6DD8831DA9BE1900718E73 /* PulseMD.app */,
+				ED6DD8971DA9BE1900718E73 /* PulseMDTests.xctest */,
+				ED6DD8A21DA9BE1900718E73 /* PulseMDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED6DD8851DA9BE1900718E73 /* PulseMD */ = {
+			isa = PBXGroup;
+			children = (
+				ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */,
+				ED6DD8881DA9BE1900718E73 /* ViewController.swift */,
+				ED6DD88A1DA9BE1900718E73 /* Main.storyboard */,
+				ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */,
+				ED6DD88F1DA9BE1900718E73 /* LaunchScreen.storyboard */,
+				ED6DD8921DA9BE1900718E73 /* Info.plist */,
+			);
+			path = PulseMD;
+			sourceTree = "<group>";
+		};
+		ED6DD89A1DA9BE1900718E73 /* PulseMDTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED6DD89B1DA9BE1900718E73 /* PulseMDTests.swift */,
+				ED6DD89D1DA9BE1900718E73 /* Info.plist */,
+			);
+			path = PulseMDTests;
+			sourceTree = "<group>";
+		};
+		ED6DD8A51DA9BE1900718E73 /* PulseMDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */,
+				ED6DD8A81DA9BE1900718E73 /* Info.plist */,
+			);
+			path = PulseMDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED6DD8821DA9BE1900718E73 /* PulseMD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED6DD8AB1DA9BE1900718E73 /* Build configuration list for PBXNativeTarget "PulseMD" */;
+			buildPhases = (
+				5A67956BE896D75ABEB44F9E /* [CP] Check Pods Manifest.lock */,
+				ED6DD87F1DA9BE1900718E73 /* Sources */,
+				ED6DD8801DA9BE1900718E73 /* Frameworks */,
+				ED6DD8811DA9BE1900718E73 /* Resources */,
+				F58EE09A9E7308DBBD39051F /* [CP] Embed Pods Frameworks */,
+				7ECA261A301B44A5DB9C13B8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PulseMD;
+			productName = PulseMD;
+			productReference = ED6DD8831DA9BE1900718E73 /* PulseMD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED6DD8961DA9BE1900718E73 /* PulseMDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED6DD8AE1DA9BE1900718E73 /* Build configuration list for PBXNativeTarget "PulseMDTests" */;
+			buildPhases = (
+				466D3C347749E71897447493 /* [CP] Check Pods Manifest.lock */,
+				ED6DD8931DA9BE1900718E73 /* Sources */,
+				ED6DD8941DA9BE1900718E73 /* Frameworks */,
+				ED6DD8951DA9BE1900718E73 /* Resources */,
+				EE5FA7A5A6ADD699D9DD37B9 /* [CP] Embed Pods Frameworks */,
+				DB498E6F4534DAE0D87EE40F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED6DD8991DA9BE1900718E73 /* PBXTargetDependency */,
+			);
+			name = PulseMDTests;
+			productName = PulseMDTests;
+			productReference = ED6DD8971DA9BE1900718E73 /* PulseMDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED6DD8A11DA9BE1900718E73 /* PulseMDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED6DD8B11DA9BE1900718E73 /* Build configuration list for PBXNativeTarget "PulseMDUITests" */;
+			buildPhases = (
+				E5BD57ED3243B2F5591C54E8 /* [CP] Check Pods Manifest.lock */,
+				ED6DD89E1DA9BE1900718E73 /* Sources */,
+				ED6DD89F1DA9BE1900718E73 /* Frameworks */,
+				ED6DD8A01DA9BE1900718E73 /* Resources */,
+				D724CA271BDC85210A92F9FF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED6DD8A41DA9BE1900718E73 /* PBXTargetDependency */,
+			);
+			name = PulseMDUITests;
+			productName = PulseMDUITests;
+			productReference = ED6DD8A21DA9BE1900718E73 /* PulseMDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED6DD87B1DA9BE1900718E73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Joseph Richardson";
+				TargetAttributes = {
+					ED6DD8821DA9BE1900718E73 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7VUZD7KHXM;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					ED6DD8961DA9BE1900718E73 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7VUZD7KHXM;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED6DD8821DA9BE1900718E73;
+					};
+					ED6DD8A11DA9BE1900718E73 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7VUZD7KHXM;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED6DD8821DA9BE1900718E73;
+					};
+				};
+			};
+			buildConfigurationList = ED6DD87E1DA9BE1900718E73 /* Build configuration list for PBXProject "PulseMD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED6DD87A1DA9BE1900718E73;
+			productRefGroup = ED6DD8841DA9BE1900718E73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED6DD8821DA9BE1900718E73 /* PulseMD */,
+				ED6DD8961DA9BE1900718E73 /* PulseMDTests */,
+				ED6DD8A11DA9BE1900718E73 /* PulseMDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED6DD8811DA9BE1900718E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6DD8911DA9BE1900718E73 /* LaunchScreen.storyboard in Resources */,
+				ED6DD88E1DA9BE1900718E73 /* Assets.xcassets in Resources */,
+				ED6DD88C1DA9BE1900718E73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6DD8951DA9BE1900718E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6DD8A01DA9BE1900718E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		466D3C347749E71897447493 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5A67956BE896D75ABEB44F9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ECA261A301B44A5DB9C13B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseMD/Pods-PulseMD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D724CA271BDC85210A92F9FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseMDUITests/Pods-PulseMDUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB498E6F4534DAE0D87EE40F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5BD57ED3243B2F5591C54E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5FA7A5A6ADD699D9DD37B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F58EE09A9E7308DBBD39051F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulseMD/Pods-PulseMD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED6DD87F1DA9BE1900718E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */,
+				ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6DD8931DA9BE1900718E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6DD89C1DA9BE1900718E73 /* PulseMDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6DD89E1DA9BE1900718E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6DD8A71DA9BE1900718E73 /* PulseMDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED6DD8991DA9BE1900718E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED6DD8821DA9BE1900718E73 /* PulseMD */;
+			targetProxy = ED6DD8981DA9BE1900718E73 /* PBXContainerItemProxy */;
+		};
+		ED6DD8A41DA9BE1900718E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED6DD8821DA9BE1900718E73 /* PulseMD */;
+			targetProxy = ED6DD8A31DA9BE1900718E73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED6DD88A1DA9BE1900718E73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED6DD88B1DA9BE1900718E73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED6DD88F1DA9BE1900718E73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED6DD8901DA9BE1900718E73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED6DD8A91DA9BE1900718E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED6DD8AA1DA9BE1900718E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED6DD8AC1DA9BE1900718E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102569EB4A47E908B567F498 /* Pods-PulseMD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				INFOPLIST_FILE = PulseMD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ED6DD8AD1DA9BE1900718E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540424CE84BC6EBC90989636 /* Pods-PulseMD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				INFOPLIST_FILE = PulseMD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ED6DD8AF1DA9BE1900718E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDBB3172A86F3FA29BC8D315 /* Pods-PulseMDTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				INFOPLIST_FILE = PulseMDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production.PulseMDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PulseMD.app/PulseMD";
+			};
+			name = Debug;
+		};
+		ED6DD8B01DA9BE1900718E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F651428638B524C85B62DC6 /* Pods-PulseMDTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				INFOPLIST_FILE = PulseMDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production.PulseMDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PulseMD.app/PulseMD";
+			};
+			name = Release;
+		};
+		ED6DD8B21DA9BE1900718E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59986E7590BD9387D42F984F /* Pods-PulseMDUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				INFOPLIST_FILE = PulseMDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production.PulseMDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PulseMD;
+			};
+			name = Debug;
+		};
+		ED6DD8B31DA9BE1900718E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5F840AD46CC92DB6224C9B /* Pods-PulseMDUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7VUZD7KHXM;
+				INFOPLIST_FILE = PulseMDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Enterprise.client.production.PulseMDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PulseMD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED6DD87E1DA9BE1900718E73 /* Build configuration list for PBXProject "PulseMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6DD8A91DA9BE1900718E73 /* Debug */,
+				ED6DD8AA1DA9BE1900718E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED6DD8AB1DA9BE1900718E73 /* Build configuration list for PBXNativeTarget "PulseMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6DD8AC1DA9BE1900718E73 /* Debug */,
+				ED6DD8AD1DA9BE1900718E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED6DD8AE1DA9BE1900718E73 /* Build configuration list for PBXNativeTarget "PulseMDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6DD8AF1DA9BE1900718E73 /* Debug */,
+				ED6DD8B01DA9BE1900718E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED6DD8B11DA9BE1900718E73 /* Build configuration list for PBXNativeTarget "PulseMDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED6DD8B21DA9BE1900718E73 /* Debug */,
+				ED6DD8B31DA9BE1900718E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED6DD87B1DA9BE1900718E73 /* Project object */;
+}
