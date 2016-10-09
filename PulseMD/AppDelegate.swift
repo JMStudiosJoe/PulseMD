@@ -36,12 +36,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
                                clientKey: "1pjkH1AsWjCvf2st0SQB5MjLb5sMuYmNxMnKigRd")
 
 
-        
+        configureParse()
+        Deployment.fetchDeployment()
         
         
         return true
     }
 
+    func configureParse() {
+        Survey.registerSubclass()
+        Deployment.registerSubclass()
+    }
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any])
     {
         MokiManage.sharedManager().didReceiveRemoteNotification(userInfo)

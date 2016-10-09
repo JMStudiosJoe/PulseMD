@@ -12,3 +12,4 @@
 
 #endif /* Bridge_header_file_h */
 #import "MokiManage.h"
+#import <Parse/PFObject+Subclass.h>

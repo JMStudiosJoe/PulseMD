@@ -10,6 +10,12 @@
 		A13678CD9CB4FC2A27729520 /* Pods_PulseMD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */; };
 		DC9D6B01F0495E56248E1336 /* Pods_PulseMDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8C7F0B2AFDEF5FA49681A5 /* Pods_PulseMDUITests.framework */; };
 		DCC372D7DEF2E414EE83FB26 /* Pods_PulseMDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD323C23AC29995623504BA /* Pods_PulseMDTests.framework */; };
+		ED3628401DAAA8D80066088C /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED36283F1DAAA8D80066088C /* Survey.swift */; };
+		ED3628431DAAA9150066088C /* Deployment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628421DAAA9150066088C /* Deployment.swift */; };
+		ED3628451DAAB03A0066088C /* PulseMDDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628441DAAB03A0066088C /* PulseMDDataModel.swift */; };
+		ED3628481DAAB5240066088C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628471DAAB5240066088C /* Location.swift */; };
+		ED36284A1DAAB9ED0066088C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628491DAAB9ED0066088C /* Question.swift */; };
+		ED36284C1DAAB9F70066088C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED36284B1DAAB9F70066088C /* Provider.swift */; };
 		ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */; };
 		ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8881DA9BE1900718E73 /* ViewController.swift */; };
 		ED6DD88C1DA9BE1900718E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88A1DA9BE1900718E73 /* Main.storyboard */; };
@@ -47,6 +53,12 @@
 		DDBB3172A86F3FA29BC8D315 /* Pods-PulseMDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5F840AD46CC92DB6224C9B /* Pods-PulseMDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDUITests/Pods-PulseMDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED28B1311DA9F2E70073513E /* Bridge-header-file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-header-file.h"; sourceTree = "<group>"; };
+		ED36283F1DAAA8D80066088C /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		ED3628421DAAA9150066088C /* Deployment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deployment.swift; sourceTree = "<group>"; };
+		ED3628441DAAB03A0066088C /* PulseMDDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseMDDataModel.swift; sourceTree = "<group>"; };
+		ED3628471DAAB5240066088C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		ED3628491DAAB9ED0066088C /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		ED36284B1DAAB9F70066088C /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		ED6DD8831DA9BE1900718E73 /* PulseMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED6DD8881DA9BE1900718E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +125,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED3628411DAAA8F70066088C /* ParseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				ED36283F1DAAA8D80066088C /* Survey.swift */,
+				ED3628491DAAB9ED0066088C /* Question.swift */,
+				ED36284B1DAAB9F70066088C /* Provider.swift */,
+				ED3628471DAAB5240066088C /* Location.swift */,
+				ED3628421DAAA9150066088C /* Deployment.swift */,
+			);
+			name = ParseClasses;
+			sourceTree = "<group>";
+		};
+		ED3628461DAAB1300066088C /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED3628441DAAB03A0066088C /* PulseMDDataModel.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 		ED6DD87A1DA9BE1900718E73 = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +170,10 @@
 		ED6DD8851DA9BE1900718E73 /* PulseMD */ = {
 			isa = PBXGroup;
 			children = (
+				ED3628411DAAA8F70066088C /* ParseClasses */,
 				ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */,
 				ED28B1311DA9F2E70073513E /* Bridge-header-file.h */,
+				ED3628461DAAB1300066088C /* DataModel */,
 				ED6DD8881DA9BE1900718E73 /* ViewController.swift */,
 				ED6DD88A1DA9BE1900718E73 /* Main.storyboard */,
 				ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */,
@@ -438,7 +472,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED3628431DAAA9150066088C /* Deployment.swift in Sources */,
+				ED3628401DAAA8D80066088C /* Survey.swift in Sources */,
 				ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */,
+				ED3628451DAAB03A0066088C /* PulseMDDataModel.swift in Sources */,
+				ED36284C1DAAB9F70066088C /* Provider.swift in Sources */,
+				ED3628481DAAB5240066088C /* Location.swift in Sources */,
+				ED36284A1DAAB9ED0066088C /* Question.swift in Sources */,
 				ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
