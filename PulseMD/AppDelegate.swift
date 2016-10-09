@@ -42,6 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
         return true
     }
 
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any])
+    {
+        MokiManage.sharedManager().didReceiveRemoteNotification(userInfo)
+    }
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
+    {
+        print(error)
+    }
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    {
+        
+        MokiManage.sharedManager().setApnsToken(deviceToken)
+        MokiManage.sharedManager().silentlyRegisterDevice(TENNANT_ID)
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
