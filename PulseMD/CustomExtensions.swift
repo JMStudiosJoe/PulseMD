@@ -47,9 +47,9 @@ extension UIView
                 
         })
     }
-    func startLoadingScreen()
+    func startLoadingScreen( message: String )
     {
-        SwiftSpinner.show("Loading Please Wait")
+        SwiftSpinner.show(message)
     }
     func endLoadingScreen()
     {

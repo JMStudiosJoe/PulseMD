@@ -25,13 +25,15 @@ class ViewController: UIViewController {
                        object:nil, queue:nil,
         
                        using:applicationNowReady)
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        starsOrProviders = !starsOrProviders
-//        
-//        // Instantiate View Controller
-//        let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
-//        addViewControllerAsChildViewController(viewController: StarRatingViewController)
-//        
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        starsOrProviders = !starsOrProviders
+        
+        // Instantiate View Controller
+        let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
+        addViewControllerAsChildViewController(viewController: StarRatingViewController)
+        
 
     }
     
@@ -47,7 +49,8 @@ class ViewController: UIViewController {
         // Instantiate View Controller
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
         let ProvidersViewController = storyboard.instantiateViewController(withIdentifier: "ProvidersViewController") as! ProvidersViewController
-        
+        print ( baseQuestionUIView.subviews )
+        baseQuestionUIView.subviews[0].removeFromSuperview()
         // Add View Controller as Child View Controller
         if starsOrProviders == true {
             self.addViewControllerAsChildViewController(viewController: StarRatingViewController)
@@ -80,6 +83,7 @@ class ViewController: UIViewController {
     func applicationNowReady(notification:Notification) -> Void {
         //endLoadingScreen()
         print ( "APPLOCATION IS FUCKING READY TO GO YO" )
+        
         
     }
     override func didReceiveMemoryWarning() {

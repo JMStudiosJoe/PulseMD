@@ -25,11 +25,3 @@ func consoleLineSeparate() {
     print ( "\n---------------------------------------\n" )
 }
 
-func startLoadingScreen(message: String)
-{
-    SwiftSpinner.show(message)
-}
-func endLoadingScreen()
-{
-    SwiftSpinner.hide()
-}

@@ -108,7 +108,7 @@
         <!--Providers View Controller-->
         <scene sceneID="Shh-2b-FXE">
             <objects>
-                <viewController id="fV7-Qf-yoa" customClass="ProvidersViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ProvidersViewController" storyboardIdentifier="ProvidersViewController" id="fV7-Qf-yoa" customClass="ProvidersViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NDu-cX-Gpp"/>
                         <viewControllerLayoutGuide type="bottom" id="QIP-cm-LlR"/>
