@@ -31,29 +31,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glz-cl-mO1">
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHb-JQ-aDO"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRs-dp-OtD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="708" id="6I8-gu-1YZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="ufC-Ab-JW3"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Wj3-q2-hBF" kind="embed" id="mCm-WW-6iA"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="BjH-yO-P25"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nRs-dp-OtD" secondAttribute="trailing" constant="10" id="92u-OM-91c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eCi-Kj-RKc" secondAttribute="bottom" constant="10" id="EYr-HD-tFC"/>
                             <constraint firstItem="gxi-nW-gyw" firstAttribute="centerX" secondItem="eCi-Kj-RKc" secondAttribute="centerX" id="LXB-52-2iZ"/>
-                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="top" secondItem="gxi-nW-gyw" secondAttribute="bottom" constant="-207" id="ReQ-kO-lbW"/>
+                            <constraint firstItem="Glz-cl-mO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LeQ-Zx-sh4"/>
+                            <constraint firstItem="nRs-dp-OtD" firstAttribute="top" secondItem="Glz-cl-mO1" secondAttribute="bottom" constant="25" id="P3N-zl-aY8"/>
+                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="top" secondItem="gxi-nW-gyw" secondAttribute="bottom" constant="-58" id="ReQ-kO-lbW"/>
+                            <constraint firstItem="Glz-cl-mO1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="Zqy-ow-fMQ"/>
+                            <constraint firstItem="nRs-dp-OtD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="bIP-BR-HfX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eCi-Kj-RKc" secondAttribute="trailing" constant="10" id="iFo-FZ-4Oz"/>
                             <constraint firstItem="eCi-Kj-RKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qiP-2j-LKY"/>
+                            <constraint firstItem="eCi-Kj-RKc" firstAttribute="top" secondItem="nRs-dp-OtD" secondAttribute="bottom" constant="41" id="uAZ-gp-mNQ"/>
                             <constraint firstItem="eCi-Kj-RKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="zsl-jn-0CY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="baseQuestionUIView" destination="eCi-Kj-RKc" id="KDV-zY-KWS"/>
+                        <outlet property="questionContainer" destination="nRs-dp-OtD" id="48H-pC-STb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.84375" y="138.8671875"/>
         </scene>
         <!--Star Rating View Controller-->
         <scene sceneID="pOC-v0-1zR">
             <objects>
-                <viewController id="DNe-Vg-5pA" customClass="StarRatingViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="StarRatingViewController" storyboardIdentifier="StarRatingViewController" id="DNe-Vg-5pA" customClass="StarRatingViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UvT-Lf-Ga3"/>
                         <viewControllerLayoutGuide type="bottom" id="vox-eo-GBI"/>
@@ -115,6 +137,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eI0-JN-ABb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047" y="901"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bdO-mL-Pz3">
+            <objects>
+                <viewController id="Wj3-q2-hBF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKo-xE-ddG">
+                        <rect key="frame" x="0.0" y="0.0" width="708" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBG-I2-Pt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

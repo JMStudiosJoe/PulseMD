@@ -18,6 +18,7 @@
 		ED36284C1DAAB9F70066088C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED36284B1DAAB9F70066088C /* Provider.swift */; };
 		ED3628521DAB04EF0066088C /* StarRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628511DAB04EF0066088C /* StarRatingViewController.swift */; };
 		ED3628561DAB072F0066088C /* ProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628551DAB072F0066088C /* ProvidersViewController.swift */; };
+		ED3628591DAB15570066088C /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628581DAB15570066088C /* CustomExtensions.swift */; };
 		ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */; };
 		ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8881DA9BE1900718E73 /* ViewController.swift */; };
 		ED6DD88C1DA9BE1900718E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88A1DA9BE1900718E73 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		ED36284B1DAAB9F70066088C /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		ED3628511DAB04EF0066088C /* StarRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingViewController.swift; sourceTree = "<group>"; };
 		ED3628551DAB072F0066088C /* ProvidersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvidersViewController.swift; sourceTree = "<group>"; };
+		ED3628581DAB15570066088C /* CustomExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
 		ED6DD8831DA9BE1900718E73 /* PulseMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED6DD8881DA9BE1900718E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			name = QuestionTypeViewControllers;
 			sourceTree = "<group>";
 		};
+		ED3628571DAB15420066088C /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				ED3628581DAB15570066088C /* CustomExtensions.swift */,
+			);
+			name = SupportFile;
+			sourceTree = "<group>";
+		};
 		ED6DD87A1DA9BE1900718E73 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +193,7 @@
 		ED6DD8851DA9BE1900718E73 /* PulseMD */ = {
 			isa = PBXGroup;
 			children = (
+				ED3628571DAB15420066088C /* SupportFile */,
 				ED3628411DAAA8F70066088C /* ParseClasses */,
 				ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */,
 				ED28B1311DA9F2E70073513E /* Bridge-header-file.h */,
@@ -486,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED3628591DAB15570066088C /* CustomExtensions.swift in Sources */,
 				ED3628431DAAA9150066088C /* Deployment.swift in Sources */,
 				ED3628401DAAA8D80066088C /* Survey.swift in Sources */,
 				ED3628521DAB04EF0066088C /* StarRatingViewController.swift in Sources */,
