@@ -5,3 +5,5 @@ Podfile.lock
 .git
 PulseMD.xcworkspace/
 PulseMD.xcodeproj/
+PulseMD.*
+PulseMD/Base.*

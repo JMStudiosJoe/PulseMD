@@ -7,21 +7,23 @@
 //
 
 import Foundation
-import SwiftSpinner
 
+//For ready state of application for customer
+var applicationReady: Bool?
+var event: UIEvent?
+let nc = NotificationCenter.default
+
+//First variables initialized for survey
 var deployedSurveyID: NSNumber?
 var deployedSurvey: Survey?
 var deployedSurveyQuestions: [Question]?
 var deployedLocation: Location?
 var surveyProviders: [Provider]?
 
-var applicationReady: Bool?
-
-var event: UIEvent?
-let nc = NotificationCenter.default
-
-
+//For dev
 func consoleLineSeparate() {
     print ( "\n---------------------------------------\n" )
 }
 
+//During user taking a survey these will get manipulated
+var currentSurveyQuestionIndex: Int!
