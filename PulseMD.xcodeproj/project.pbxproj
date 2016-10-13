@@ -10,6 +10,13 @@
 		A13678CD9CB4FC2A27729520 /* Pods_PulseMD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */; };
 		DC9D6B01F0495E56248E1336 /* Pods_PulseMDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8C7F0B2AFDEF5FA49681A5 /* Pods_PulseMDUITests.framework */; };
 		DCC372D7DEF2E414EE83FB26 /* Pods_PulseMDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD323C23AC29995623504BA /* Pods_PulseMDTests.framework */; };
+		ED0BAC0A1DADF69A00BFB46A /* MultiChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC091DADF69A00BFB46A /* MultiChoiceViewController.swift */; };
+		ED0BAC0C1DADF6A400BFB46A /* ShortAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC0B1DADF6A400BFB46A /* ShortAnswerViewController.swift */; };
+		ED0BAC0E1DADF6C000BFB46A /* EmailQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC0D1DADF6C000BFB46A /* EmailQuestionViewController.swift */; };
+		ED0BAC101DADF6C900BFB46A /* YesNoChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC0F1DADF6C900BFB46A /* YesNoChoiceViewController.swift */; };
+		ED0BAC121DADF6D900BFB46A /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC111DADF6D900BFB46A /* CommentViewController.swift */; };
+		ED0BAC141DADF9E200BFB46A /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC131DADF9E200BFB46A /* LandingPageViewController.swift */; };
+		ED0BAC161DADFA0400BFB46A /* PulseSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BAC151DADFA0400BFB46A /* PulseSurveyViewController.swift */; };
 		ED3628401DAAA8D80066088C /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED36283F1DAAA8D80066088C /* Survey.swift */; };
 		ED3628431DAAA9150066088C /* Deployment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628421DAAA9150066088C /* Deployment.swift */; };
 		ED3628451DAAB03A0066088C /* PulseMDDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628441DAAB03A0066088C /* PulseMDDataModel.swift */; };
@@ -20,12 +27,14 @@
 		ED3628561DAB072F0066088C /* ProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628551DAB072F0066088C /* ProvidersViewController.swift */; };
 		ED3628591DAB15570066088C /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3628581DAB15570066088C /* CustomExtensions.swift */; };
 		ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */; };
-		ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8881DA9BE1900718E73 /* ViewController.swift */; };
+		ED6DD8891DA9BE1900718E73 /* PulseLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8881DA9BE1900718E73 /* PulseLoadViewController.swift */; };
 		ED6DD88C1DA9BE1900718E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88A1DA9BE1900718E73 /* Main.storyboard */; };
 		ED6DD88E1DA9BE1900718E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */; };
 		ED6DD8911DA9BE1900718E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88F1DA9BE1900718E73 /* LaunchScreen.storyboard */; };
 		ED6DD89C1DA9BE1900718E73 /* PulseMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD89B1DA9BE1900718E73 /* PulseMDTests.swift */; };
 		ED6DD8A71DA9BE1900718E73 /* PulseMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */; };
+		EDC47A7A1DAF4BCA00B1B7B7 /* EndSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */; };
+		EDC47A7C1DAF4D4200B1B7B7 /* NPSRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC47A7B1DAF4D4200B1B7B7 /* NPSRatingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,13 @@
 		BA2EFE7FE895326A962A6A31 /* Pods_PulseMD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulseMD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBB3172A86F3FA29BC8D315 /* Pods-PulseMDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDTests/Pods-PulseMDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5F840AD46CC92DB6224C9B /* Pods-PulseMDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulseMDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulseMDUITests/Pods-PulseMDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED0BAC091DADF69A00BFB46A /* MultiChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceViewController.swift; sourceTree = "<group>"; };
+		ED0BAC0B1DADF6A400BFB46A /* ShortAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnswerViewController.swift; sourceTree = "<group>"; };
+		ED0BAC0D1DADF6C000BFB46A /* EmailQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailQuestionViewController.swift; sourceTree = "<group>"; };
+		ED0BAC0F1DADF6C900BFB46A /* YesNoChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoChoiceViewController.swift; sourceTree = "<group>"; };
+		ED0BAC111DADF6D900BFB46A /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		ED0BAC131DADF9E200BFB46A /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		ED0BAC151DADFA0400BFB46A /* PulseSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseSurveyViewController.swift; sourceTree = "<group>"; };
 		ED28B1311DA9F2E70073513E /* Bridge-header-file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-header-file.h"; sourceTree = "<group>"; };
 		ED36283F1DAAA8D80066088C /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		ED3628421DAAA9150066088C /* Deployment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deployment.swift; sourceTree = "<group>"; };
@@ -67,7 +83,7 @@
 		ED3628581DAB15570066088C /* CustomExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
 		ED6DD8831DA9BE1900718E73 /* PulseMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED6DD8881DA9BE1900718E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED6DD8881DA9BE1900718E73 /* PulseLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLoadViewController.swift; sourceTree = "<group>"; };
 		ED6DD88B1DA9BE1900718E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED6DD8901DA9BE1900718E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +94,8 @@
 		ED6DD8A21DA9BE1900718E73 /* PulseMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulseMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseMDUITests.swift; sourceTree = "<group>"; };
 		ED6DD8A81DA9BE1900718E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndSurveyViewController.swift; sourceTree = "<group>"; };
+		EDC47A7B1DAF4D4200B1B7B7 /* NPSRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NPSRatingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +174,12 @@
 			children = (
 				ED3628511DAB04EF0066088C /* StarRatingViewController.swift */,
 				ED3628551DAB072F0066088C /* ProvidersViewController.swift */,
+				ED0BAC091DADF69A00BFB46A /* MultiChoiceViewController.swift */,
+				ED0BAC0B1DADF6A400BFB46A /* ShortAnswerViewController.swift */,
+				ED0BAC0D1DADF6C000BFB46A /* EmailQuestionViewController.swift */,
+				ED0BAC0F1DADF6C900BFB46A /* YesNoChoiceViewController.swift */,
+				ED0BAC111DADF6D900BFB46A /* CommentViewController.swift */,
+				EDC47A7B1DAF4D4200B1B7B7 /* NPSRatingViewController.swift */,
 			);
 			name = QuestionTypeViewControllers;
 			sourceTree = "<group>";
@@ -198,7 +222,10 @@
 				ED6DD8861DA9BE1900718E73 /* AppDelegate.swift */,
 				ED28B1311DA9F2E70073513E /* Bridge-header-file.h */,
 				ED3628461DAAB1300066088C /* DataModel */,
-				ED6DD8881DA9BE1900718E73 /* ViewController.swift */,
+				ED6DD8881DA9BE1900718E73 /* PulseLoadViewController.swift */,
+				ED0BAC131DADF9E200BFB46A /* LandingPageViewController.swift */,
+				EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */,
+				ED0BAC151DADFA0400BFB46A /* PulseSurveyViewController.swift */,
 				ED3628501DAB04C80066088C /* QuestionTypeViewControllers */,
 				ED6DD88A1DA9BE1900718E73 /* Main.storyboard */,
 				ED6DD88D1DA9BE1900718E73 /* Assets.xcassets */,
@@ -499,15 +526,24 @@
 			files = (
 				ED3628591DAB15570066088C /* CustomExtensions.swift in Sources */,
 				ED3628431DAAA9150066088C /* Deployment.swift in Sources */,
+				ED0BAC161DADFA0400BFB46A /* PulseSurveyViewController.swift in Sources */,
 				ED3628401DAAA8D80066088C /* Survey.swift in Sources */,
+				ED0BAC0A1DADF69A00BFB46A /* MultiChoiceViewController.swift in Sources */,
 				ED3628521DAB04EF0066088C /* StarRatingViewController.swift in Sources */,
-				ED6DD8891DA9BE1900718E73 /* ViewController.swift in Sources */,
+				ED6DD8891DA9BE1900718E73 /* PulseLoadViewController.swift in Sources */,
 				ED3628451DAAB03A0066088C /* PulseMDDataModel.swift in Sources */,
+				ED0BAC101DADF6C900BFB46A /* YesNoChoiceViewController.swift in Sources */,
+				ED0BAC141DADF9E200BFB46A /* LandingPageViewController.swift in Sources */,
+				ED0BAC121DADF6D900BFB46A /* CommentViewController.swift in Sources */,
+				EDC47A7A1DAF4BCA00B1B7B7 /* EndSurveyViewController.swift in Sources */,
 				ED36284C1DAAB9F70066088C /* Provider.swift in Sources */,
 				ED3628481DAAB5240066088C /* Location.swift in Sources */,
 				ED3628561DAB072F0066088C /* ProvidersViewController.swift in Sources */,
+				ED0BAC0C1DADF6A400BFB46A /* ShortAnswerViewController.swift in Sources */,
 				ED36284A1DAAB9ED0066088C /* Question.swift in Sources */,
+				EDC47A7C1DAF4D4200B1B7B7 /* NPSRatingViewController.swift in Sources */,
 				ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */,
+				ED0BAC0E1DADF6C000BFB46A /* EmailQuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
