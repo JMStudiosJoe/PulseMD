@@ -29,16 +29,10 @@ class PulseLoadViewController: UIViewController {
         
     }
     
-    @IBAction func nextQuestion(_ sender: AnyObject) {
-        //baseQuestionUIView.viewController()?.addChildViewController(StarRatingViewController.)
-        
-    }
-    
-    
-    
     func applicationNowReady(notification:Notification) -> Void {
         //endLoadingScreen()
-        print ( "APPLOCATION IS FUCKING READY TO GO YO" )
+        
+        performSegue(withIdentifier: "landingPage", sender: self)
         
         
     }

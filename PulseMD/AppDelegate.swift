@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
         // Initialize Parse.
         let err: NSErrorPointer = nil
         MokiManage.sharedManager().delegate = self
-        //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, enableASM: true, enableAEM: true, asmSettingsFileName: "SettingsSchema.json", error: err)
+        //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, enableASM: true, enableAEM: true, asmSettingsFileName: "SettingsSchema.json", error: nil)
         
         
         //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, error: err)

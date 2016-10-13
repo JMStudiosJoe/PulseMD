@@ -39,7 +39,7 @@ class Provider: PFObject, PFSubclassing {
 }
 extension Provider {
     static func fetchProviders(location: Location) {
-        print ( location )
+        
         let query = Provider.query()!
         query.whereKey("locations", equalTo: location)
         query.addAscendingOrder("position")
@@ -64,7 +64,7 @@ extension Provider {
                         
                         let newProvider: Provider = Provider( objId: objId, credentials: credentials, position: position, firstName: firstName, lastName: lastName, specialty: specialty, profilePic: profilePicture )
                         
-                        print ( newProvider )
+                        
                         providers.append(newProvider)
                         
                     }

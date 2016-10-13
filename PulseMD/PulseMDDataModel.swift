@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Reachability
 
 //For ready state of application for customer
 var applicationReady: Bool?
@@ -20,9 +21,30 @@ var deployedSurveyQuestions: [Question]?
 var deployedLocation: Location?
 var surveyProviders: [Provider]?
 
+func delay(_ delay:Double, closure:@escaping ()->())// http://stackoverflow.com/questions/24034544/dispatch-after-gcd-in-swift
+{
+    DispatchQueue.main.asyncAfter(
+        deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+}
+
 //For dev
 func consoleLineSeparate() {
     print ( "\n---------------------------------------\n" )
+}
+
+func checkInternetConnection() -> Bool
+{
+    do {
+        let reachability = Reachability()
+        if(reachability.isReachable())
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
 }
 
 //During user taking a survey these will get manipulated

@@ -22,7 +22,7 @@ class PulseSurveyViewController: UIViewController {
 
     func startSurvey() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
+        currentSurveyQuestionIndex = 0
         
         // Instantiate View Controller
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
@@ -30,12 +30,37 @@ class PulseSurveyViewController: UIViewController {
         
     }
     
-    func nextQuestion() {
+    @IBAction func nextQuestion(_ sender: AnyObject) {
+        incrementSurveyIndex()
+    }
+    
+    @IBAction func backQuestion(_ sender: AnyObject) {
+        decrementSurveyIndex()
+    }
+    
+    func decrementSurveyIndex() {
+        if ( currentSurveyQuestionIndex < (deployedSurveyQuestions?.count)! && currentSurveyQuestionIndex >= 0 ) {
+            
+            currentSurveyQuestionIndex! -= 1
+            determinQuestionType()
+        }
+    }
+    func incrementSurveyIndex() {
+        if ( currentSurveyQuestionIndex < ( deployedSurveyQuestions?.count )! - 1 && currentSurveyQuestionIndex >= 0 ) {
+            
+            currentSurveyQuestionIndex! += 1
+            determinQuestionType()
+        }
+        else {
+            //finish the survey
+            performSegue(withIdentifier: "endSurvey", sender: self)
+        }
+    }
+    func determinQuestionType() {
+        
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        //starsOrProviders = !starsOrProviders
         
-        // Instantiate View Controller
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
         let ProvidersViewController = storyboard.instantiateViewController(withIdentifier: "ProvidersViewController") as! ProvidersViewController
         let MultiChoiceViewController = storyboard.instantiateViewController(withIdentifier: "MultiChoiceViewController") as! MultiChoiceViewController
@@ -43,23 +68,41 @@ class PulseSurveyViewController: UIViewController {
         let EmailQuestionViewController = storyboard.instantiateViewController(withIdentifier: "EmailQuestionViewController") as! EmailQuestionViewController
         let YesNoChoiceViewController = storyboard.instantiateViewController(withIdentifier: "YesNoChoiceViewController") as! YesNoChoiceViewController
         let CommentViewController = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
-        print ( surveyQuestionContainer.subviews )
-        surveyQuestionContainer.subviews[0].removeFromSuperview()
+        let NPSRatingViewController = storyboard.instantiateViewController(withIdentifier: "NPSRatingViewController") as! NPSRatingViewController
+        
+        
+        if ( !surveyQuestionContainer.subviews.isEmpty ) {
+            surveyQuestionContainer.subviews[0].removeFromSuperview()
+        }
         
         let currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
-        
+        consoleLineSeparate()
+        print( currentQuestion.type )
+        consoleLineSeparate()
         if ( currentQuestion.type == "star_rating" ) {
             self.addViewControllerAsChildViewController(viewController: StarRatingViewController)
         }
-        else if ( currentQuestion.type == "providers" ) {
+        else if ( currentQuestion.type == "provider" ) {
             self.addViewControllerAsChildViewController(viewController: ProvidersViewController)
         }
-//        if starsOrProviders == true {
-//            self.addViewControllerAsChildViewController(viewController: StarRatingViewController)
-//        }
-//        else {
-//            self.addViewControllerAsChildViewController(viewController: ProvidersViewController)
-//        }
+        else if ( currentQuestion.type == "multi" ) {
+            self.addViewControllerAsChildViewController(viewController: MultiChoiceViewController)
+        }
+        else if ( currentQuestion.type == "text" ) {
+            self.addViewControllerAsChildViewController(viewController: ShortAnswerViewController)
+        }
+        else if ( currentQuestion.type == "email" ) {
+            self.addViewControllerAsChildViewController(viewController: EmailQuestionViewController)
+        }
+        else if ( currentQuestion.type == "yes_no" ) {
+            self.addViewControllerAsChildViewController(viewController: YesNoChoiceViewController)
+        }
+        else if ( currentQuestion.type == "text_area" ) {
+            self.addViewControllerAsChildViewController(viewController: CommentViewController)
+        }
+        else if ( currentQuestion.type == "nps_rating" ) {
+            self.addViewControllerAsChildViewController(viewController: NPSRatingViewController)
+        }
     }
     
     
@@ -81,8 +124,6 @@ class PulseSurveyViewController: UIViewController {
         // Notify Child View Controller
         viewController.didMove(toParentViewController: self)
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
