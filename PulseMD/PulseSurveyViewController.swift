@@ -39,7 +39,7 @@ class PulseSurveyViewController: UIViewController {
     }
     
     func decrementSurveyIndex() {
-        if ( currentSurveyQuestionIndex < (deployedSurveyQuestions?.count)! && currentSurveyQuestionIndex >= 0 ) {
+        if ( currentSurveyQuestionIndex < (deployedSurveyQuestions?.count)! && currentSurveyQuestionIndex > 0 ) {
             
             currentSurveyQuestionIndex! -= 1
             determinQuestionType()
@@ -70,7 +70,7 @@ class PulseSurveyViewController: UIViewController {
         let CommentViewController = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         let NPSRatingViewController = storyboard.instantiateViewController(withIdentifier: "NPSRatingViewController") as! NPSRatingViewController
         
-        
+        print ( currentSurveyQuestionIndex )
         if ( !surveyQuestionContainer.subviews.isEmpty ) {
             surveyQuestionContainer.subviews[0].removeFromSuperview()
         }
