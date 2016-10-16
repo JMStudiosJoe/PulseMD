@@ -23,7 +23,7 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.floatRatingView.delegate = self
         print ( "IM THE STAR RATING" )
         setupRating()
         // Do any additional setup after loading the view.
@@ -34,12 +34,12 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
         
         gestFloat.numberOfTapsRequired = 1
         
-        floatRatingView.addGestureRecognizer(gestFloat)
+        //floatRatingView.addGestureRecognizer(gestFloat)
         
         
 //        print ( starEmpty )
 //        print ( starFull )
-        print ( self.floatRatingView )
+        //print ( self.floatRatingView )
         
 //        self.floatRatingView.contentMode = UIViewContentMode.scaleAspectFit
 //        self.floatRatingView.maxRating = 5

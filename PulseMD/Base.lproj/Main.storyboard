@@ -254,39 +254,29 @@
                         <viewControllerLayoutGuide type="top" id="UvT-Lf-Ga3"/>
                         <viewControllerLayoutGuide type="bottom" id="vox-eo-GBI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NbC-o4-wf5">
+                    <view key="view" contentMode="scaleToFill" id="NbC-o4-wf5" customClass="FloatRatingView" customModule="FloatRatingView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-gK-VXe" customClass="FloatRatingView">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Pulse.StarScreen.EmptyStar"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="Pulse.StarScreen.FilledStar"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.08996475035190632" green="0.028158783826926714" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="vox-eo-GBI" firstAttribute="top" secondItem="HH4-gK-VXe" secondAttribute="bottom" constant="20" id="cI3-MM-zl0"/>
-                            <constraint firstItem="HH4-gK-VXe" firstAttribute="centerX" secondItem="NbC-o4-wf5" secondAttribute="centerX" id="iqp-pU-m8z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HH4-gK-VXe" secondAttribute="trailing" id="kkZ-gt-RaD"/>
-                            <constraint firstItem="HH4-gK-VXe" firstAttribute="top" secondItem="UvT-Lf-Ga3" secondAttribute="bottom" constant="127" id="oVd-YX-Z4k"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="HH4-gK-VXe" secondAttribute="leading" id="r5w-Vv-bkT"/>
-                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Pulse.StarScreen.EmptyStar"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="Pulse.StarScreen.FilledStar"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
+                                <size key="value" width="16" height="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="floatRatingView" destination="HH4-gK-VXe" id="A3d-0B-T68"/>
+                        <outlet property="floatRatingView" destination="NbC-o4-wf5" id="04q-Gv-YmT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yal-GV-2mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
