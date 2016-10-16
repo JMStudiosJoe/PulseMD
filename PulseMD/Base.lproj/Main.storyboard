@@ -258,27 +258,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StarRating ViewControlleer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh2-KL-IHX">
-                                <color key="backgroundColor" red="0.03872820785740172" green="1" blue="0.064464498401891612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="QpZ-Xb-ZZM"/>
-                                    <constraint firstAttribute="width" constant="207" id="g6w-Hx-a4P"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-gK-VXe" customClass="FloatRatingView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Pulse.StarScreen.EmptyStar"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="Pulse.StarScreen.FilledStar"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.08996475035190632" green="0.028158783826926714" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qh2-KL-IHX" firstAttribute="top" secondItem="UvT-Lf-Ga3" secondAttribute="bottom" constant="251" id="TFm-cY-xN7"/>
-                            <constraint firstItem="Qh2-KL-IHX" firstAttribute="centerX" secondItem="NbC-o4-wf5" secondAttribute="centerX" id="YEj-fE-e78"/>
+                            <constraint firstItem="vox-eo-GBI" firstAttribute="top" secondItem="HH4-gK-VXe" secondAttribute="bottom" constant="20" id="cI3-MM-zl0"/>
+                            <constraint firstItem="HH4-gK-VXe" firstAttribute="centerX" secondItem="NbC-o4-wf5" secondAttribute="centerX" id="iqp-pU-m8z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HH4-gK-VXe" secondAttribute="trailing" id="kkZ-gt-RaD"/>
+                            <constraint firstItem="HH4-gK-VXe" firstAttribute="top" secondItem="UvT-Lf-Ga3" secondAttribute="bottom" constant="127" id="oVd-YX-Z4k"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HH4-gK-VXe" secondAttribute="leading" id="r5w-Vv-bkT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="floatRatingView" destination="HH4-gK-VXe" id="A3d-0B-T68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yal-GV-2mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="892"/>
+            <point key="canvasLocation" x="118.75" y="891.79687499999989"/>
         </scene>
         <!--Comment View Controller-->
         <scene sceneID="Yjt-M8-Khc">
@@ -448,4 +461,8 @@
             <point key="canvasLocation" x="1545" y="877"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pulse.StarScreen.EmptyStar" width="176" height="200"/>
+        <image name="Pulse.StarScreen.FilledStar" width="176" height="200"/>
+    </resources>
 </document>

@@ -12,14 +12,38 @@ class PulseSurveyViewController: UIViewController {
 
     //question container
     @IBOutlet weak var surveyQuestionContainer: UIView!
+    @IBOutlet weak var nextButton: UIButton!   //just next is a reserve word or something
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         startSurvey()
+        nc.addObserver(forName:Notification.Name(rawValue:"nextButtonFadeIn"),
+                       object:nil, queue:nil,
+                       
+                       using:nextButtonFadeIn)
+        nc.addObserver(forName:Notification.Name(rawValue:"nextButtonFadeOut"),
+                       object:nil, queue:nil,
+                       
+                       using:nextButtonFadeOut)
+
         // Do any additional setup after loading the view.
     }
-
+    
+    //MARK: Next button event handlers for when user selects an answer to fade in the next button and fade it out
+    func nextButtonFadeIn(notification:Notification) -> Void {
+        print ( "Fadein the next button" )
+        //nextButton.fadeIn()
+        
+    }
+    
+    func nextButtonFadeOut(notification:Notification) -> Void {
+        print ( "Fadeout the next button" )
+        //nextButton.fadeOut()
+        
+    }
+    //MARK: end next button
+    
     func startSurvey() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         currentSurveyQuestionIndex = 0
@@ -32,6 +56,9 @@ class PulseSurveyViewController: UIViewController {
     
     @IBAction func nextQuestion(_ sender: AnyObject) {
         incrementSurveyIndex()
+        nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
+                object: nil)
+
     }
     
     @IBAction func backQuestion(_ sender: AnyObject) {

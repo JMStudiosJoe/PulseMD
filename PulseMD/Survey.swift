@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class Survey: PFObject {
+class Survey: PFObject, PFSubclassing {
     @NSManaged var identifier: String?
     @NSManaged var name: String?
     @NSManaged var thankYouMessage: String?
@@ -20,6 +20,10 @@ class Survey: PFObject {
     @NSManaged var questions: PFRelation<PFObject>?// needs to be <Question>?
     @NSManaged var surveyQuestion: [Question]?// needs to be <Question>?
     @NSManaged var questionTypes: [String]?// needs to be <Question>?
+    
+    static func parseClassName() -> String {
+        return "Survey"
+    }
     
 }
 extension Survey {
@@ -40,11 +44,6 @@ extension Survey {
         }
     }
 }
-extension Survey: PFSubclassing {
-    
-    static func parseClassName() -> String {
-        return "Survey"
-    }
-}
+
 
 
