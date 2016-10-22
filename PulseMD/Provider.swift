@@ -13,7 +13,7 @@ class Provider: PFObject, PFSubclassing {
     @NSManaged var credentials: String?
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
-    @NSManaged var profilePicture: PFFile?
+    @NSManaged var profilePicture: UIImage?
     @NSManaged var specialty: String?
     @NSManaged var position: NSNumber?
     
@@ -28,8 +28,22 @@ class Provider: PFObject, PFSubclassing {
         self.lastName = lastName
         self.position = position
         self.specialty = specialty
-        self.profilePicture = profilePic
+        //self.profilePicture = profilePic
         self.credentials = credentials
+        do{
+            
+            let data : Data = try(profilePic?.getData())!
+            let image = UIImage(data: data)
+            self.profilePicture = image
+            
+        }
+        catch _{
+            print("Error Loading image.")
+            let image = UIImage(named: "ThankYouScreen.CheckMark.png")
+            self.profilePicture = image
+            
+            
+        }
     }
     
     override init() {

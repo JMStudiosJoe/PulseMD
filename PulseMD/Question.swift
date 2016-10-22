@@ -61,6 +61,7 @@ extension Question {
                     let position: NSNumber = question["position"] as! NSNumber
                     let multi: [String]? = question["multi"] as? [String]
                     let type: String = question["type"] as! String
+                    
                     let choice: [Bool]? = question["choice"] as? [Bool]
                     
                     let newQuestion = Question( objectId: objcId,

@@ -8,11 +8,21 @@
 
 import UIKit
 
-class PulseSurveyViewController: UIViewController {
+protocol JMSurveyQuestionsPresentationDelegate
+{
+    func removeBlur()
+    func makeAnswerObjectWithCorrectTypeAndStore()
+}
+
+
+
+class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentationDelegate {
 
     //question container
     @IBOutlet weak var surveyQuestionContainer: UIView!
     @IBOutlet weak var nextButton: UIButton!   //just next is a reserve word or something
+    
+    var blurEffectView : UIVisualEffectView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -152,6 +162,13 @@ class PulseSurveyViewController: UIViewController {
         viewController.didMove(toParentViewController: self)
     }
     
+    func removeBlur() {
+        self.blurEffectView?.removeFromSuperview()
+    }
+    
+    func makeAnswerObjectWithCorrectTypeAndStore() {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

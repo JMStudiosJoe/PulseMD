@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-nW-gyw">
@@ -50,7 +50,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SGM-3Z-Ssj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xC5-Eg-qIv">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpg-bQ-k81">
@@ -83,7 +83,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Qh7-CK-WVZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pTe-vO-qWc">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taking survey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsL-cU-dae">
@@ -151,7 +151,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hHN-u5-VUq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="14G-Ps-76m">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -173,7 +173,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sWb-tV-EXU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yQa-cd-cqG">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SwQ-Cv-3vj">
@@ -222,7 +222,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gVM-5Z-jZD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SeI-6F-55N">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NPS Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC9-WB-d1P">
@@ -255,7 +255,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vox-eo-GBI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NbC-o4-wf5" customClass="FloatRatingView" customModule="FloatRatingView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.08996475035190632" green="0.028158783826926714" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
@@ -283,6 +283,24 @@
             </objects>
             <point key="canvasLocation" x="118.75" y="891.79687499999989"/>
         </scene>
+        <!--Provider Selected View Controller-->
+        <scene sceneID="Npy-bj-gfh">
+            <objects>
+                <viewController restorationIdentifier="ProviderSelectedViewController" storyboardIdentifier="ProviderSelectedViewController" id="FQl-JA-9bT" customClass="ProviderSelectedViewController" customModule="PulseMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bVo-9T-UkY"/>
+                        <viewControllerLayoutGuide type="bottom" id="u7f-ts-hMw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GQe-py-LOF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXc-Rs-hZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-659" y="1601"/>
+        </scene>
         <!--Comment View Controller-->
         <scene sceneID="Yjt-M8-Khc">
             <objects>
@@ -292,7 +310,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fkF-Ia-lVw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1SY-mr-QbR">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-ML-Gyu">
@@ -325,7 +343,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UfN-0Z-olV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0j4-Iy-ywD">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yes no" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-SP-80M">
@@ -359,7 +377,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G9X-Hx-hnM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kAd-3L-LYA">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvp-Dw-d9M">
@@ -392,7 +410,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QIP-cm-LlR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="36u-eb-nfU">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Providers View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDZ-Yz-RQj">
@@ -426,7 +444,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gY4-En-CMY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y1e-UZ-QNM">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short answer view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xl-RW-SRh">
