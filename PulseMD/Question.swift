@@ -73,6 +73,7 @@ extension Question {
 
                     surveyQuestions.append(newQuestion)
                 }
+                print( "Got to Questions all of em" )
                 deployedSurveyQuestions = surveyQuestions
             }
             else {

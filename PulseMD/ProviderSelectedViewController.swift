@@ -26,6 +26,34 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        providerImage.image = selectedProviderPassedImage
+        
+        let creds = selectedProvider!["credentials"] as! String
+        let spec = selectedProvider!["specialty"] as! String
+        
+        if(creds == "." || creds == "")
+        {
+            lastName.text = selectedProviderLastName!
+        }
+        else
+        {
+            lastName.text = "\(selectedProviderLastName!), \(creds)"
+        }
+        if(spec == "." || spec == "")
+        {
+            providerDescription.text = ""
+        }
+        else
+        {
+            providerDescription.text = spec
+        }
+        
+        firstName.text = selectedProviderFirstName
+        //lastName.text = "\(selectedProviderLastName!), \(creds!)"
+        
+        yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
+        noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())
+        // Do any additional setup after loading the view.
         // Do any additional setup after loading the view.
     }
     

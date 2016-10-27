@@ -31,7 +31,7 @@ class PulseLoadViewController: UIViewController {
     
     func applicationNowReady(notification:Notification) -> Void {
         //endLoadingScreen()
-        
+        print ("APPLICATION IS READY")
         performSegue(withIdentifier: "landingPage", sender: self)
         
         

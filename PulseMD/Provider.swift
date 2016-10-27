@@ -13,7 +13,7 @@ class Provider: PFObject, PFSubclassing {
     @NSManaged var credentials: String?
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
-    @NSManaged var profilePicture: UIImage?
+    //@NSManaged var profilePicture: PFFile?
     @NSManaged var specialty: String?
     @NSManaged var position: NSNumber?
     
@@ -22,6 +22,7 @@ class Provider: PFObject, PFSubclassing {
     }
     init( objId: String, credentials: String?, position: NSNumber?, firstName: String, lastName: String, specialty: String?, profilePic: PFFile? ) {
         super.init()
+        
         //self.objectId = objId
         
         self.firstName = firstName
@@ -30,17 +31,20 @@ class Provider: PFObject, PFSubclassing {
         self.specialty = specialty
         //self.profilePicture = profilePic
         self.credentials = credentials
+        
         do{
-            
+            print( ">>>>>Got to IMAGES" )
             let data : Data = try(profilePic?.getData())!
             let image = UIImage(data: data)
-            self.profilePicture = image
+            print ( image )
+            surveyProviderImages?.append( image! )
+            
             
         }
         catch _{
             print("Error Loading image.")
             let image = UIImage(named: "ThankYouScreen.CheckMark.png")
-            self.profilePicture = image
+            surveyProviderImages?.append( image! )
             
             
         }
@@ -59,9 +63,10 @@ extension Provider {
         query.addAscendingOrder("position")
         query.findObjectsInBackground {( objects: [PFObject]?, error: Error? ) -> Void in
             
+            print ( error )
             if error == nil
             {
-                
+                print ( objects?.count )
                 if let objects = objects {
                     
                     var providers: [Provider] = []
@@ -77,7 +82,6 @@ extension Provider {
                         let profilePicture: PFFile? = provider["profilePicture"] as? PFFile
                         
                         let newProvider: Provider = Provider( objId: objId, credentials: credentials, position: position, firstName: firstName, lastName: lastName, specialty: specialty, profilePic: profilePicture )
-                        
                         
                         providers.append(newProvider)
                         

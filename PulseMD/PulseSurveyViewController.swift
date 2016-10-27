@@ -61,6 +61,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         // Instantiate View Controller
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
         addViewControllerAsChildViewController(viewController: StarRatingViewController)
+        determinQuestionType()
         
     }
     

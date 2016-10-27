@@ -29,7 +29,7 @@ extension Deployment {
                 
                 let surveyObject: Survey = object["survey"] as! Survey
                 let locationObject: Location = object["location"] as! Location
-                
+                print( "Got to Deployment" )
                 Survey.fetchSurvey( objectId: surveyObject.objectId! )
                 Location.fetchLocation( objectId: locationObject.objectId! )
                 

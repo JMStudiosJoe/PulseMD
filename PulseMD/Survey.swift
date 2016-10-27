@@ -37,7 +37,7 @@ extension Survey {
                 print ( error )
             }
             else if let object = object {
-                
+                print( "Got to Survey" )
                 let relation: PFRelation<PFObject> = object["questions"] as! PFRelation<PFObject>
                 Question.fetchSurveyQuestions( rel: relation )
             }
