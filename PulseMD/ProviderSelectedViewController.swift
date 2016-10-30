@@ -48,13 +48,11 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
             providerDescription.text = spec
         }
         
-        firstName.text = selectedProviderFirstName
-        //lastName.text = "\(selectedProviderLastName!), \(creds!)"
-        
+        firstName.text = selectedProviderFirstName!
+
         yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
         noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())
-        // Do any additional setup after loading the view.
-        // Do any additional setup after loading the view.
+        
     }
     
 
@@ -63,7 +61,8 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
         noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())
         makeAnswerObjectWithCorrectTypeAndStore()
-        
+        nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+                object: nil)
         removeBlur()
         self.dismiss(animated: true, completion: nil)
     }

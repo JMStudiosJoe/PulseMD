@@ -89,12 +89,20 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
     // MARK: FloatRatingViewDelegate
     
     func floatRatingView(_ ratingView: FloatRatingView, isUpdating rating:Float) {
-        print( rating )
+        
         //self.liveLabel.text = NSString(format: "%.2f", self.floatRatingView.rating) as String
     }
     
     func floatRatingView(_ ratingView: FloatRatingView, didUpdate rating: Float) {
         print( rating )
+        surveyFloatRatingSelected = rating
+        nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
+                object: nil)
+        
+        print( "hazzzaaaaa i do get called" )
+        nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+                object: nil)
+        //surveyAnswerCreation
         //self.updatedLabel.text = NSString(format: "%.2f", self.floatRatingView.rating) as String
     }
     

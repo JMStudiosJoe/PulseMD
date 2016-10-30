@@ -31,26 +31,28 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         startSurvey()
         nc.addObserver(forName:Notification.Name(rawValue:"nextButtonFadeIn"),
                        object:nil, queue:nil,
-                       
                        using:nextButtonFadeIn)
         nc.addObserver(forName:Notification.Name(rawValue:"nextButtonFadeOut"),
                        object:nil, queue:nil,
-                       
                        using:nextButtonFadeOut)
+        nc.addObserver(forName:Notification.Name(rawValue:"surveyAnswerCreation"),
+                       object:nil, queue:nil,
+                       using:surveyAnswerCreation)
 
+        //surveyAnswerCreation
         // Do any additional setup after loading the view.
     }
     
     //MARK: Next button event handlers for when user selects an answer to fade in the next button and fade it out
     func nextButtonFadeIn(notification:Notification) -> Void {
         print ( "Fadein the next button" )
-        //nextButton.fadeIn()
+        nextButton.fadeIn()
         
     }
     
     func nextButtonFadeOut(notification:Notification) -> Void {
         print ( "Fadeout the next button" )
-        //nextButton.fadeOut()
+        nextButton.fadeOut()
         
     }
     //MARK: end next button
@@ -97,7 +99,6 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     }
     func determinQuestionType() {
         
-        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
@@ -109,15 +110,12 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         let CommentViewController = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         let NPSRatingViewController = storyboard.instantiateViewController(withIdentifier: "NPSRatingViewController") as! NPSRatingViewController
         
-        print ( currentSurveyQuestionIndex )
         if ( !surveyQuestionContainer.subviews.isEmpty ) {
             surveyQuestionContainer.subviews[0].removeFromSuperview()
         }
-        
+    
         let currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
-        consoleLineSeparate()
-        print( currentQuestion.type )
-        consoleLineSeparate()
+        
         if ( currentQuestion.type == "star_rating" ) {
             self.addViewControllerAsChildViewController(viewController: StarRatingViewController)
         }
@@ -149,7 +147,6 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     private func addViewControllerAsChildViewController(viewController: UIViewController) {
         // Add Child View Controller
         
-        
         surveyQuestionContainer.viewController()?.addChildViewController(viewController)
         
         // Add Child View as Subview
@@ -169,6 +166,48 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     }
     
     func makeAnswerObjectWithCorrectTypeAndStore() {
+        
+        
+    }
+    
+    func surveyAnswerCreation(notification:Notification) -> Void {
+        
+        print( "wait i get called?" )
+        var currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
+        var text: String = currentQuestion.question!
+        var id: String = currentQuestion.objectId!
+        var selection: AnyObject = {} as AnyObject
+        
+        if ( currentQuestion.type == "star_rating" ) {
+            selection = surveyFloatRatingSelected as AnyObject
+        }
+        else if ( currentQuestion.type == "provider" ) {
+            
+        }
+        else if ( currentQuestion.type == "multi" ) {
+            
+        }
+        else if ( currentQuestion.type == "text" ) {
+            
+        }
+        else if ( currentQuestion.type == "email" ) {
+            
+        }
+        else if ( currentQuestion.type == "yes_no" ) {
+            
+        }
+        else if ( currentQuestion.type == "text_area" ) {
+            
+        }
+        else if ( currentQuestion.type == "nps_rating" ) {
+            
+        }
+        
+        //make answer object and add to answers array then fade in the next button
+        
+        
+        nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
+                object: nil)
         
     }
     override func didReceiveMemoryWarning() {

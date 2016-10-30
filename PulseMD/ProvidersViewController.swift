@@ -32,8 +32,6 @@ class ProvidersViewController: UIViewController, UICollectionViewDelegate, UICol
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provider", for: indexPath) as! ProviderCollectionViewCell
         let provider: Provider = surveyProviders![ indexPath.row ]
-        print ( surveyProviderImages! )
-        print (surveyProviderImages![ indexPath.row ])
         cell.providerImage.image = surveyProviderImages![ indexPath.row ]
         
         let fname: String = provider.firstName!
