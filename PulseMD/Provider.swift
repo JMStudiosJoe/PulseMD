@@ -13,23 +13,24 @@ class Provider: PFObject, PFSubclassing {
     @NSManaged var credentials: String?
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
-    //@NSManaged var profilePicture: PFFile?
+    @NSManaged var identifier: String?
     @NSManaged var specialty: String?
     @NSManaged var position: NSNumber?
     
     static func parseClassName() -> String {
         return "Provider"
     }
-    init( objId: String, credentials: String?, position: NSNumber?, firstName: String, lastName: String, specialty: String?, profilePic: PFFile? ) {
+    init( objId: String, identifier: String, credentials: String?, position: NSNumber?, firstName: String, lastName: String, specialty: String?, profilePic: PFFile? ) {
         super.init()
         
         //self.objectId = objId
+        print( "does every PFobject already come with identifier?" )
         
         self.firstName = firstName
         self.lastName = lastName
         self.position = position
         self.specialty = specialty
-        //self.profilePicture = profilePic
+        self.identifier = identifier
         self.credentials = credentials
         
         do{
@@ -74,6 +75,7 @@ extension Provider {
                     for provider in objects as! [Provider] {
                         
                         let objId: String = provider.objectId!
+                        let identifier: String = provider["identifier"] as! String
                         let firstName: String = provider["firstName"] as! String
                         let lastName: String = provider["lastName"] as! String
                         let position: NSNumber? = provider["position"] as? NSNumber
@@ -81,7 +83,7 @@ extension Provider {
                         let credentials: String? = provider["credentials"] as? String
                         let profilePicture: PFFile? = provider["profilePicture"] as? PFFile
                         
-                        let newProvider: Provider = Provider( objId: objId, credentials: credentials, position: position, firstName: firstName, lastName: lastName, specialty: specialty, profilePic: profilePicture )
+                        let newProvider: Provider = Provider( objId: objId, identifier: identifier, credentials: credentials, position: position, firstName: firstName, lastName: lastName, specialty: specialty, profilePic: profilePicture )
                         
                         providers.append(newProvider)
                         

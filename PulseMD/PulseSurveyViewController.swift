@@ -21,6 +21,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     //question container
     @IBOutlet weak var surveyQuestionContainer: UIView!
     @IBOutlet weak var nextButton: UIButton!   //just next is a reserve word or something
+    @IBOutlet weak var questionText: UITextView!
     
     var blurEffectView : UIVisualEffectView?
     

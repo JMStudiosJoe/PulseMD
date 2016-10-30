@@ -39,6 +39,9 @@
 		EDB225871DBC083600D05F2B /* ProviderSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB225861DBC083600D05F2B /* ProviderSelectedViewController.swift */; };
 		EDC47A7A1DAF4BCA00B1B7B7 /* EndSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */; };
 		EDC47A7C1DAF4D4200B1B7B7 /* NPSRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC47A7B1DAF4D4200B1B7B7 /* NPSRatingViewController.swift */; };
+		EDD8CBA91DC64D5400005495 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8CBA81DC64D5400005495 /* Response.swift */; };
+		EDD8CBAB1DC6524100005495 /* HealthcareOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8CBAA1DC6524100005495 /* HealthcareOrganization.swift */; };
+		EDD8CBAD1DC653FF00005495 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8CBAC1DC653FF00005495 /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		EDB225861DBC083600D05F2B /* ProviderSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderSelectedViewController.swift; sourceTree = "<group>"; };
 		EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndSurveyViewController.swift; sourceTree = "<group>"; };
 		EDC47A7B1DAF4D4200B1B7B7 /* NPSRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NPSRatingViewController.swift; sourceTree = "<group>"; };
+		EDD8CBA81DC64D5400005495 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		EDD8CBAA1DC6524100005495 /* HealthcareOrganization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthcareOrganization.swift; sourceTree = "<group>"; };
+		EDD8CBAC1DC653FF00005495 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +168,12 @@
 			children = (
 				ED36283F1DAAA8D80066088C /* Survey.swift */,
 				ED3628491DAAB9ED0066088C /* Question.swift */,
+				EDD8CBAC1DC653FF00005495 /* Answer.swift */,
 				ED36284B1DAAB9F70066088C /* Provider.swift */,
 				ED3628471DAAB5240066088C /* Location.swift */,
+				EDD8CBAA1DC6524100005495 /* HealthcareOrganization.swift */,
 				ED3628421DAAA9150066088C /* Deployment.swift */,
+				EDD8CBA81DC64D5400005495 /* Response.swift */,
 			);
 			name = ParseClasses;
 			sourceTree = "<group>";
@@ -545,12 +554,14 @@
 				ED0BAC0A1DADF69A00BFB46A /* MultiChoiceViewController.swift in Sources */,
 				ED3628521DAB04EF0066088C /* StarRatingViewController.swift in Sources */,
 				EDB225871DBC083600D05F2B /* ProviderSelectedViewController.swift in Sources */,
+				EDD8CBAD1DC653FF00005495 /* Answer.swift in Sources */,
 				ED6DD8891DA9BE1900718E73 /* PulseLoadViewController.swift in Sources */,
 				ED3628451DAAB03A0066088C /* PulseMDDataModel.swift in Sources */,
 				ED0BAC101DADF6C900BFB46A /* YesNoChoiceViewController.swift in Sources */,
 				ED0BAC141DADF9E200BFB46A /* LandingPageViewController.swift in Sources */,
 				ED0BAC121DADF6D900BFB46A /* CommentViewController.swift in Sources */,
 				EDC47A7A1DAF4BCA00B1B7B7 /* EndSurveyViewController.swift in Sources */,
+				EDD8CBAB1DC6524100005495 /* HealthcareOrganization.swift in Sources */,
 				ED16822B1DBB33DE002C0652 /* ProviderCollectionViewCell.swift in Sources */,
 				ED36284C1DAAB9F70066088C /* Provider.swift in Sources */,
 				ED3628481DAAB5240066088C /* Location.swift in Sources */,
@@ -560,6 +571,7 @@
 				EDC47A7C1DAF4D4200B1B7B7 /* NPSRatingViewController.swift in Sources */,
 				ED6DD8871DA9BE1900718E73 /* AppDelegate.swift in Sources */,
 				ED0BAC0E1DADF6C000BFB46A /* EmailQuestionViewController.swift in Sources */,
+				EDD8CBA91DC64D5400005495 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

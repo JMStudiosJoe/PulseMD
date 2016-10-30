@@ -33,6 +33,7 @@ extension Location {
                     print( "Got to Location" )
                     let location = objects[0] as! Location
                     deployedLocation = location
+                    print( deployedLocation )
                     Provider.fetchProviders( location: location )
                 }
             }
