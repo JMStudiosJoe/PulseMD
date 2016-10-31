@@ -52,3 +52,4 @@ func checkInternetConnection() -> Bool
 //During user taking a survey these will get manipulated
 var currentSurveyQuestionIndex: Int!
 var surveyFloatRatingSelected: Float!
+var surveyAnswers: [Answer]!

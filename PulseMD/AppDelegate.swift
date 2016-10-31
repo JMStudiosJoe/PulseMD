@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
         IQKeyboardManager.sharedManager().enable = true
         // Initialize Parse.
         surveyProviderImages = []
+        surveyAnswers = []
         let err: NSErrorPointer = nil
         MokiManage.sharedManager().delegate = self
         //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, enableASM: true, enableAEM: true, asmSettingsFileName: "SettingsSchema.json", error: nil)

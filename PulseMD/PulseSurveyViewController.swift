@@ -45,13 +45,13 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     //MARK: Next button event handlers for when user selects an answer to fade in the next button and fade it out
     func nextButtonFadeIn(notification:Notification) -> Void {
-        print ( "Fadein the next button" )
+        
         nextButton.fadeIn()
         
     }
     
     func nextButtonFadeOut(notification:Notification) -> Void {
-        print ( "Fadeout the next button" )
+        
         nextButton.fadeOut()
         
     }
@@ -182,7 +182,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
             selection = surveyFloatRatingSelected as AnyObject
         }
         else if ( currentQuestion.type == "provider" ) {
-            
+            selection = selectedProvider!
         }
         else if ( currentQuestion.type == "multi" ) {
             
@@ -204,8 +204,11 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         }
         
         //make answer object and add to answers array then fade in the next button
+        let answer: Answer = Answer( questionId: id, text: text, type: currentQuestion.type!, selection: selection )
+        surveyAnswers.append( answer )
         
-        
+        consoleLineSeparate()
+        print( surveyAnswers )
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
                 object: nil)
         

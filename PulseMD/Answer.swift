@@ -9,18 +9,25 @@
 import Foundation
 import Parse
 
-class Answer: NSObject {
-    @NSManaged var id: String
+class Answer: PFObject, PFSubclassing {
+    @NSManaged var questionId: String
     @NSManaged var text: String
     @NSManaged var type: String
     @NSManaged var selection: AnyObject?
     
-    init( id: String, text: String, type: String, selection: AnyObject ) {
+    init( questionId: String, text: String, type: String, selection: AnyObject ) {
         super.init()
-        self.id = id
+        
+        self.questionId = questionId // need to tell florida ross about this change, tis also another parse class addition possibly
         self.text = text
         self.type = type
         self.selection = selection
+    }
+    static func parseClassName() -> String {
+        return "Answer"
+    }
+    override class func initialize() {
+        
     }
     
     override init() {
