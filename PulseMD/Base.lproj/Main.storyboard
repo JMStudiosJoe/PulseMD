@@ -223,22 +223,123 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NPS Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC9-WB-d1P">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Do-rh-Rai">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="YTn-8a-8mL"/>
-                                    <constraint firstAttribute="width" constant="87" id="fK6-Nb-9S0"/>
+                                    <constraint firstAttribute="width" constant="76" id="5vy-wL-geG"/>
+                                    <constraint firstAttribute="height" constant="76" id="r3L-cF-3Cq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69J-5M-KbH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="8Yy-8E-imh"/>
+                                    <constraint firstAttribute="width" constant="76" id="es3-Is-xzg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-gS-e6a">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="03k-TR-NcD"/>
+                                    <constraint firstAttribute="height" constant="76" id="z0B-Kd-RrL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-qB-igL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="WeO-sD-vPr"/>
+                                    <constraint firstAttribute="width" constant="76" id="mD7-qe-IL2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6E-4a-JWV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="MAc-ny-sFf"/>
+                                    <constraint firstAttribute="height" constant="76" id="yHg-PT-fmI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ0-zu-TIh">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="5xc-Te-eMQ"/>
+                                    <constraint firstAttribute="height" constant="76" id="hjr-bl-Cd8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC0-fF-FS7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="9hc-Dm-G69"/>
+                                    <constraint firstAttribute="height" constant="76" id="dJf-Fj-JVb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjt-P9-LxA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Qzt-Zy-ESW"/>
+                                    <constraint firstAttribute="width" constant="76" id="pBw-ww-nw2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUY-rD-8H5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="CHZ-FK-kYj"/>
+                                    <constraint firstAttribute="width" constant="76" id="Ila-IS-iD0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="9" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4c-CM-KhS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="8Xf-d8-eaI"/>
+                                    <constraint firstAttribute="height" constant="76" id="mXZ-AB-b7B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cP-eP-1oC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="kZE-ze-x0C"/>
+                                    <constraint firstAttribute="width" constant="76" id="wfe-DN-DbB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49146799270549119" green="0.23193168057999178" blue="0.81164993523316065" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jC9-WB-d1P" firstAttribute="top" secondItem="IIj-y3-wjj" secondAttribute="bottom" constant="228" id="8OW-sv-7eV"/>
-                            <constraint firstItem="jC9-WB-d1P" firstAttribute="centerX" secondItem="SeI-6F-55N" secondAttribute="centerX" id="HdQ-b0-7dX"/>
+                            <constraint firstItem="Qjt-P9-LxA" firstAttribute="leading" secondItem="LC0-fF-FS7" secondAttribute="trailing" constant="8" id="08y-vl-7st"/>
+                            <constraint firstItem="fYA-gS-e6a" firstAttribute="leading" secondItem="69J-5M-KbH" secondAttribute="trailing" constant="8" id="0hS-jT-Sr0"/>
+                            <constraint firstItem="MUY-rD-8H5" firstAttribute="leading" secondItem="Qjt-P9-LxA" secondAttribute="trailing" constant="8" id="2Sx-bR-N50"/>
+                            <constraint firstItem="z6E-4a-JWV" firstAttribute="centerY" secondItem="OZF-qB-igL" secondAttribute="centerY" id="2wf-DL-szT"/>
+                            <constraint firstItem="p4c-CM-KhS" firstAttribute="leading" secondItem="MUY-rD-8H5" secondAttribute="trailing" constant="8" id="6cF-al-Cet"/>
+                            <constraint firstItem="9Do-rh-Rai" firstAttribute="leading" secondItem="SeI-6F-55N" secondAttribute="leadingMargin" constant="34" id="8Hj-W7-Jgs"/>
+                            <constraint firstItem="p4c-CM-KhS" firstAttribute="centerY" secondItem="MUY-rD-8H5" secondAttribute="centerY" id="A9o-u1-xsO"/>
+                            <constraint firstItem="7cP-eP-1oC" firstAttribute="centerY" secondItem="p4c-CM-KhS" secondAttribute="centerY" id="Ay4-uX-R7k"/>
+                            <constraint firstItem="fYA-gS-e6a" firstAttribute="centerY" secondItem="69J-5M-KbH" secondAttribute="centerY" id="Cur-4k-Y7J"/>
+                            <constraint firstItem="LC0-fF-FS7" firstAttribute="centerY" secondItem="KQ0-zu-TIh" secondAttribute="centerY" id="L4X-SB-1bl"/>
+                            <constraint firstItem="KQ0-zu-TIh" firstAttribute="leading" secondItem="z6E-4a-JWV" secondAttribute="trailing" constant="8" id="M0l-fp-XUX"/>
+                            <constraint firstItem="KQ0-zu-TIh" firstAttribute="centerY" secondItem="z6E-4a-JWV" secondAttribute="centerY" id="QoM-2A-kRX"/>
+                            <constraint firstItem="69J-5M-KbH" firstAttribute="centerY" secondItem="9Do-rh-Rai" secondAttribute="centerY" id="cbH-06-Mfo"/>
+                            <constraint firstItem="Qjt-P9-LxA" firstAttribute="centerY" secondItem="LC0-fF-FS7" secondAttribute="centerY" id="fkO-9z-kqX"/>
+                            <constraint firstItem="OZF-qB-igL" firstAttribute="centerY" secondItem="fYA-gS-e6a" secondAttribute="centerY" id="huN-nv-Wg0"/>
+                            <constraint firstItem="9Do-rh-Rai" firstAttribute="top" secondItem="IIj-y3-wjj" secondAttribute="bottom" constant="123" id="iFB-DA-uDZ"/>
+                            <constraint firstItem="z6E-4a-JWV" firstAttribute="leading" secondItem="OZF-qB-igL" secondAttribute="trailing" constant="8" id="nIc-kt-zTl"/>
+                            <constraint firstItem="69J-5M-KbH" firstAttribute="leading" secondItem="9Do-rh-Rai" secondAttribute="trailing" constant="8" id="nfk-97-bNa"/>
+                            <constraint firstItem="LC0-fF-FS7" firstAttribute="leading" secondItem="KQ0-zu-TIh" secondAttribute="trailing" constant="8" id="omJ-DD-lGf"/>
+                            <constraint firstItem="7cP-eP-1oC" firstAttribute="leading" secondItem="p4c-CM-KhS" secondAttribute="trailing" constant="8" id="v8r-7z-q0Z"/>
+                            <constraint firstItem="MUY-rD-8H5" firstAttribute="centerY" secondItem="Qjt-P9-LxA" secondAttribute="centerY" id="vQP-D6-nML"/>
+                            <constraint firstItem="OZF-qB-igL" firstAttribute="leading" secondItem="fYA-gS-e6a" secondAttribute="trailing" constant="8" id="ylL-Lt-MI0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="npsButtonRatings" destination="9Do-rh-Rai" collectionClass="NSMutableArray" id="5Qz-rC-H3q"/>
+                        <outletCollection property="npsButtonRatings" destination="69J-5M-KbH" collectionClass="NSMutableArray" id="gaI-Zx-1WW"/>
+                        <outletCollection property="npsButtonRatings" destination="fYA-gS-e6a" collectionClass="NSMutableArray" id="Spr-qi-6m2"/>
+                        <outletCollection property="npsButtonRatings" destination="OZF-qB-igL" collectionClass="NSMutableArray" id="fVT-Ft-Mrg"/>
+                        <outletCollection property="npsButtonRatings" destination="z6E-4a-JWV" collectionClass="NSMutableArray" id="Ji8-Sd-fZR"/>
+                        <outletCollection property="npsButtonRatings" destination="KQ0-zu-TIh" collectionClass="NSMutableArray" id="3vF-Jk-P6k"/>
+                        <outletCollection property="npsButtonRatings" destination="LC0-fF-FS7" collectionClass="NSMutableArray" id="MVI-Hi-uej"/>
+                        <outletCollection property="npsButtonRatings" destination="Qjt-P9-LxA" collectionClass="NSMutableArray" id="v3I-sU-7bg"/>
+                        <outletCollection property="npsButtonRatings" destination="MUY-rD-8H5" collectionClass="NSMutableArray" id="fVf-wT-sxj"/>
+                        <outletCollection property="npsButtonRatings" destination="p4c-CM-KhS" collectionClass="NSMutableArray" id="OwB-GG-t9r"/>
+                        <outletCollection property="npsButtonRatings" destination="7cP-eP-1oC" collectionClass="NSMutableArray" id="Nhc-IG-4Ty"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfp-MQ-h9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

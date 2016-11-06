@@ -10,12 +10,42 @@ import UIKit
 
 class NPSRatingViewController: UIViewController {
 
+    @IBOutlet var npsButtonRatings : [UIButton]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNPSButtonRating()
         // Do any additional setup after loading the view.
     }
 
+    
+    func setupNPSButtonRating()
+    {
+        for i in stride(from: 0, to: 11, by: 1)
+        {
+            let gest = UITapGestureRecognizer(target: self, action: #selector(NPSRatingViewController.npsRatingSelected(_:)))
+            gest.numberOfTapsRequired = 1
+            npsButtonRatings[i].addGestureRecognizer(gest)
+            npsButtonRatings[i].tintColor = UIColor.white
+            npsButtonRatings[i].setImage(UIImage(named: "\(i).png"), for: UIControlState())
+            npsButtonRatings[i].setImage(UIImage(named: "\(i).blue.png"), for: UIControlState.highlighted)
+            npsButtonRatings[i].setImage(UIImage(named: "\(i).blue.png"), for: UIControlState.selected)
+        }
+    }
+    func npsRatingSelected(_ recognizier:UITapGestureRecognizer)
+    {
+        
+        npsRatingNumber = Int(recognizier.view!.restorationIdentifier!)
+        npsButtonRatings[npsRatingNumber].tintColor = self.view.tintColor
+        //makeAnswerObjectWithCorrectTypeAndStore()
+        nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+                object: nil)
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

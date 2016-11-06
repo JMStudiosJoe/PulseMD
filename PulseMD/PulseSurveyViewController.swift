@@ -172,10 +172,10 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     func surveyAnswerCreation(notification:Notification) -> Void {
         
-        print( "wait i get called?" )
-        var currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
-        var text: String = currentQuestion.question!
-        var id: String = currentQuestion.objectId!
+        
+        let currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
+        let text: String = currentQuestion.question!
+        let id: String = currentQuestion.objectId!
         var selection: AnyObject = {} as AnyObject
         
         if ( currentQuestion.type == "star_rating" ) {
@@ -200,7 +200,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
             
         }
         else if ( currentQuestion.type == "nps_rating" ) {
-            
+            selection = npsRatingNumber as AnyObject
         }
         
         //make answer object and add to answers array then fade in the next button

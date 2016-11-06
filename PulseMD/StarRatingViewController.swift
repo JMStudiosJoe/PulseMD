@@ -96,10 +96,7 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
     func floatRatingView(_ ratingView: FloatRatingView, didUpdate rating: Float) {
         print( rating )
         surveyFloatRatingSelected = rating
-        nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
-                object: nil)
         
-        print( "hazzzaaaaa i do get called" )
         nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
                 object: nil)
         //surveyAnswerCreation

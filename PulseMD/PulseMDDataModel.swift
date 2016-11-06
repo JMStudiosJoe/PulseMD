@@ -21,7 +21,7 @@ var deployedSurveyQuestions: [Question]?
 var deployedLocation: Location?
 var surveyProviders: [Provider]?
 var surveyProviderImages: [UIImage]?
-var selectedProvider: Provider?
+
 
 func delay(_ delay:Double, closure:@escaping ()->())// http://stackoverflow.com/questions/24034544/dispatch-after-gcd-in-swift
 {
@@ -51,5 +51,7 @@ func checkInternetConnection() -> Bool
 
 //During user taking a survey these will get manipulated
 var currentSurveyQuestionIndex: Int!
-var surveyFloatRatingSelected: Float!
+var selectedProvider: Provider?         //Provider question type
+var surveyFloatRatingSelected: Float!   //Float rating question type
+var npsRatingNumber : NSInteger!        //NPS rating answer type
 var surveyAnswers: [Answer]!
