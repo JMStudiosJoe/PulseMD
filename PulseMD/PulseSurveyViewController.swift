@@ -185,7 +185,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
             selection = selectedProvider!
         }
         else if ( currentQuestion.type == "multi" ) {
-            
+            selection = multichoiceSelection as AnyObject
         }
         else if ( currentQuestion.type == "text" ) {
             

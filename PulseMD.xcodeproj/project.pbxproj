@@ -35,6 +35,7 @@
 		ED6DD8911DA9BE1900718E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6DD88F1DA9BE1900718E73 /* LaunchScreen.storyboard */; };
 		ED6DD89C1DA9BE1900718E73 /* PulseMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD89B1DA9BE1900718E73 /* PulseMDTests.swift */; };
 		ED6DD8A71DA9BE1900718E73 /* PulseMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */; };
+		EDA0081C1DCFBB66006B35D9 /* MultiChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0081B1DCFBB66006B35D9 /* MultiChoiceTableViewCell.swift */; };
 		EDAEEAC71DAFD93B00B852A5 /* SettingsSchema.json in Resources */ = {isa = PBXBuildFile; fileRef = EDAEEAC61DAFD93B00B852A5 /* SettingsSchema.json */; };
 		EDB225871DBC083600D05F2B /* ProviderSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB225861DBC083600D05F2B /* ProviderSelectedViewController.swift */; };
 		EDC47A7A1DAF4BCA00B1B7B7 /* EndSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */; };
@@ -103,6 +104,7 @@
 		ED6DD8A21DA9BE1900718E73 /* PulseMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulseMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6DD8A61DA9BE1900718E73 /* PulseMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseMDUITests.swift; sourceTree = "<group>"; };
 		ED6DD8A81DA9BE1900718E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA0081B1DCFBB66006B35D9 /* MultiChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		EDAEEAC61DAFD93B00B852A5 /* SettingsSchema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SettingsSchema.json; sourceTree = "<group>"; };
 		EDB225861DBC083600D05F2B /* ProviderSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderSelectedViewController.swift; sourceTree = "<group>"; };
 		EDC47A791DAF4BCA00B1B7B7 /* EndSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndSurveyViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				ED16822A1DBB33DE002C0652 /* ProviderCollectionViewCell.swift */,
 				EDB225861DBC083600D05F2B /* ProviderSelectedViewController.swift */,
 				ED0BAC091DADF69A00BFB46A /* MultiChoiceViewController.swift */,
+				EDA0081B1DCFBB66006B35D9 /* MultiChoiceTableViewCell.swift */,
 				ED0BAC0B1DADF6A400BFB46A /* ShortAnswerViewController.swift */,
 				ED0BAC0D1DADF6C000BFB46A /* EmailQuestionViewController.swift */,
 				ED0BAC0F1DADF6C900BFB46A /* YesNoChoiceViewController.swift */,
@@ -565,6 +568,7 @@
 				ED16822B1DBB33DE002C0652 /* ProviderCollectionViewCell.swift in Sources */,
 				ED36284C1DAAB9F70066088C /* Provider.swift in Sources */,
 				ED3628481DAAB5240066088C /* Location.swift in Sources */,
+				EDA0081C1DCFBB66006B35D9 /* MultiChoiceTableViewCell.swift in Sources */,
 				ED3628561DAB072F0066088C /* ProvidersViewController.swift in Sources */,
 				ED0BAC0C1DADF6A400BFB46A /* ShortAnswerViewController.swift in Sources */,
 				ED36284A1DAAB9ED0066088C /* Question.swift in Sources */,

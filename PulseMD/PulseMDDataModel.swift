@@ -51,7 +51,9 @@ func checkInternetConnection() -> Bool
 
 //During user taking a survey these will get manipulated
 var currentSurveyQuestionIndex: Int!
-var selectedProvider: Provider?         //Provider question type
-var surveyFloatRatingSelected: Float!   //Float rating question type
-var npsRatingNumber : NSInteger!        //NPS rating answer type
+var selectedProvider: Provider?             //Provider question type
+var surveyFloatRatingSelected: Float!       //Float rating question type
+var npsRatingNumber : NSInteger!            //NPS rating answer type
+var multiChoiceAvalableAnswers: [String]!   //Multichoice
+var multichoiceSelection: String!
 var surveyAnswers: [Answer]!
