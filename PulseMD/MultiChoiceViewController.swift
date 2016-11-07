@@ -14,7 +14,7 @@ class MultiChoiceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpMultiChoiceAnswers()
         // Do any additional setup after loading the view.
     }
 

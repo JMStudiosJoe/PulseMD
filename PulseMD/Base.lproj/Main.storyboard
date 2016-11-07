@@ -182,7 +182,7 @@
                                     <constraint firstAttribute="height" constant="720" id="ym4-fX-3bW"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="choice" id="KuS-fx-2gr" customClass="MultiChoiceTableViewCell" customModule="PulseMD" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="multiChoice" id="KuS-fx-2gr" customClass="MultiChoiceTableViewCell" customModule="PulseMD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="984" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KuS-fx-2gr" id="gZ2-CV-wDp">
@@ -532,23 +532,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yes no" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-SP-80M">
-                                <frame key="frameInset" minX="363" minY="205" width="51" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="or" translatesAutoresizingMaskIntoConstraints="NO" id="hpa-lX-bhJ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5ax-jT-OJT"/>
-                                    <constraint firstAttribute="width" constant="51" id="pt2-PA-qGg"/>
+                                    <constraint firstAttribute="height" constant="477" id="1mh-9J-a04"/>
+                                    <constraint firstAttribute="width" constant="79" id="VbT-oR-oLA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqI-2l-R6V">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="453" id="1r6-q8-Mz2"/>
+                                    <constraint firstAttribute="width" constant="441" id="KW9-v6-x1H"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="yesSelected:" destination="F2M-ew-M9g" eventType="touchUpInside" id="idY-28-sGY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yip-iK-V0G">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="453" id="VdR-sT-8bd"/>
+                                    <constraint firstAttribute="width" constant="441" id="wSo-BT-Azj"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="noSelected:" destination="F2M-ew-M9g" eventType="touchUpInside" id="LFk-5A-dsz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.055813926289907667" blue="0.087488233486083034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="l6h-SP-80M" firstAttribute="top" secondItem="gYl-RS-4xN" secondAttribute="bottom" constant="185" id="3r2-cT-T6Z"/>
-                            <constraint firstItem="l6h-SP-80M" firstAttribute="centerX" secondItem="0j4-Iy-ywD" secondAttribute="centerX" id="8ec-VO-ice"/>
+                            <constraint firstItem="Yip-iK-V0G" firstAttribute="centerY" secondItem="hpa-lX-bhJ" secondAttribute="centerY" id="H0I-ce-8PD"/>
+                            <constraint firstItem="dqI-2l-R6V" firstAttribute="leading" secondItem="hpa-lX-bhJ" secondAttribute="trailing" constant="8" id="Mr9-f1-MjI"/>
+                            <constraint firstItem="hpa-lX-bhJ" firstAttribute="top" secondItem="gYl-RS-4xN" secondAttribute="bottom" id="S7I-bG-wb7"/>
+                            <constraint firstItem="hpa-lX-bhJ" firstAttribute="centerX" secondItem="0j4-Iy-ywD" secondAttribute="centerX" id="p4d-US-YXV"/>
+                            <constraint firstItem="hpa-lX-bhJ" firstAttribute="leading" secondItem="Yip-iK-V0G" secondAttribute="trailing" constant="12" id="uCo-WO-yhq"/>
+                            <constraint firstItem="dqI-2l-R6V" firstAttribute="centerY" secondItem="hpa-lX-bhJ" secondAttribute="centerY" id="vW1-gp-svg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noButton" destination="Yip-iK-V0G" id="eA1-U8-hvU"/>
+                        <outlet property="yesButton" destination="dqI-2l-R6V" id="hj3-Aq-pO7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCA-o4-9kN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -609,7 +631,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="provider" id="Tqy-0b-uLB" customClass="ProviderCollectionViewCell" customModule="PulseMD" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="0.0" width="315" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="315" height="100"/>
@@ -728,5 +750,6 @@
     <resources>
         <image name="Pulse.StarScreen.EmptyStar" width="176" height="200"/>
         <image name="Pulse.StarScreen.FilledStar" width="176" height="200"/>
+        <image name="or" width="79" height="356"/>
     </resources>
 </document>

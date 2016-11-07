@@ -194,7 +194,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
             
         }
         else if ( currentQuestion.type == "yes_no" ) {
-            
+            selection = yesNoResponse as AnyObject
         }
         else if ( currentQuestion.type == "text_area" ) {
             
