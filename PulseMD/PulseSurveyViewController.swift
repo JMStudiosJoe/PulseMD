@@ -60,7 +60,8 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     func startSurvey() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         currentSurveyQuestionIndex = 0
-        
+        nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
+                object: nil)
         // Instantiate View Controller
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
         addViewControllerAsChildViewController(viewController: StarRatingViewController)
@@ -70,6 +71,15 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     @IBAction func nextQuestion(_ sender: AnyObject) {
         incrementSurveyIndex()
+        
+//        if( deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text" ||
+//            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text_area" ||
+//            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "email") {
+//            
+//            nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+//                    object: nil)
+//        }
+        
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
                 object: nil)
 
@@ -189,15 +199,32 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         }
         else if ( currentQuestion.type == "text" ) {
             
+            do {
+                selection = shortAnswerResponse as AnyObject
+            }
+            catch {
+                selection = "" as AnyObject
+            }
         }
         else if ( currentQuestion.type == "email" ) {
             
+            do {
+                selection = emailResponse as AnyObject
+            }
+            catch {
+                selection = "" as AnyObject
+            }
         }
         else if ( currentQuestion.type == "yes_no" ) {
             selection = yesNoResponse as AnyObject
         }
         else if ( currentQuestion.type == "text_area" ) {
-            
+            do {
+                selection = commentResponse as AnyObject
+            }
+            catch {
+                selection = "" as AnyObject
+            }
         }
         else if ( currentQuestion.type == "nps_rating" ) {
             selection = npsRatingNumber as AnyObject

@@ -58,4 +58,8 @@ var npsRatingNumber : NSInteger!            //NPS rating answer type
 var multiChoiceAvalableAnswers: [String]!   //Multichoice
 var multichoiceSelection: String!
 var yesNoResponse: String!
+var commentResponse : String!
+var emailResponse : String!
+var shortAnswerResponse : String!
+
 var surveyAnswers: [Answer]!

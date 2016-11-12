@@ -46,19 +46,19 @@ class MultiChoiceViewController: UIViewController {
         
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath)
     {
         multichoiceSelection = multiChoiceAvalableAnswers[(indexPath as NSIndexPath).row]
         let cell = tableView.cellForRow(at: indexPath)
         //cell!.textLabel!.backgroundColor = UIColor.whiteColor()
-        
+        print( multichoiceSelection )
         cell!.textLabel!.textColor = UIColor.black
         cell?.textLabel?.tintColor = self.view.tintColor
 
         nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
                 object: nil)
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, didDeselectRowAtIndexPath indexPath: IndexPath)
     {
         let cell = tableView.cellForRow(at: indexPath)
         cell!.textLabel!.backgroundColor = UIColor.clear

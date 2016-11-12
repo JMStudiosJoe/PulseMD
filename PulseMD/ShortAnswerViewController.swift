@@ -9,12 +9,42 @@
 import UIKit
 
 class ShortAnswerViewController: UIViewController {
-
+    
+    @IBOutlet weak var shortAnswerField : UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        
+        
+        textView.resignFirstResponder()
+        
+        return true;
+    }
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        textView.text = ""
+        textView.textColor = UIColor.black
+        textView.becomeFirstResponder()
+    }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        print( text )
+        print( textView.text )
+        if( text == "\n")
+        {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
