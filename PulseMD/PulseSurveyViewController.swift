@@ -28,7 +28,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startSurvey()
+        
         nc.addObserver(forName:Notification.Name(rawValue:"nextButtonFadeIn"),
                        object:nil, queue:nil,
                        using:nextButtonFadeIn)
@@ -39,6 +39,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
                        object:nil, queue:nil,
                        using:surveyAnswerCreation)
 
+        startSurvey()
         //surveyAnswerCreation
         // Do any additional setup after loading the view.
     }
@@ -70,18 +71,24 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     }
     
     @IBAction func nextQuestion(_ sender: AnyObject) {
-        incrementSurveyIndex()
         
-//        if( deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text" ||
-//            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text_area" ||
-//            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "email") {
-//            
-//            nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
-//                    object: nil)
-//        }
-        
+        self.surveyQuestionContainer.slideOut()
+        self.questionText.slideOut()
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
                 object: nil)
+        if( deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text" ||
+            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text_area" ||
+            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "email") {
+            
+            
+            nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+                    object: nil)
+        }
+        
+        incrementSurveyIndex()
+        
+        self.questionText.fadeOut()
+        self.surveyQuestionContainer.fadeOut()
 
     }
     
@@ -92,6 +99,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     func decrementSurveyIndex() {
         if ( currentSurveyQuestionIndex < (deployedSurveyQuestions?.count)! && currentSurveyQuestionIndex > 0 ) {
             
+            surveyAnswers.remove( at: surveyAnswers.count - 1 )
             currentSurveyQuestionIndex! -= 1
             determinQuestionType()
         }
@@ -150,6 +158,8 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         else if ( currentQuestion.type == "nps_rating" ) {
             self.addViewControllerAsChildViewController(viewController: NPSRatingViewController)
         }
+        self.questionText.fadeIn()
+        self.surveyQuestionContainer.fadeIn()
     }
     
     
@@ -182,7 +192,6 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     func surveyAnswerCreation(notification:Notification) -> Void {
         
-        
         let currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
         let text: String = currentQuestion.question!
         let id: String = currentQuestion.objectId!
@@ -199,19 +208,19 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         }
         else if ( currentQuestion.type == "text" ) {
             
-            do {
+            if( shortAnswerResponse != nil ) {
                 selection = shortAnswerResponse as AnyObject
             }
-            catch {
+            else {
                 selection = "" as AnyObject
             }
         }
         else if ( currentQuestion.type == "email" ) {
             
-            do {
+            if( emailResponse != nil ) {
                 selection = emailResponse as AnyObject
             }
-            catch {
+            else {
                 selection = "" as AnyObject
             }
         }
@@ -219,10 +228,10 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
             selection = yesNoResponse as AnyObject
         }
         else if ( currentQuestion.type == "text_area" ) {
-            do {
+            if( commentResponse != nil ) {
                 selection = commentResponse as AnyObject
             }
-            catch {
+            else {
                 selection = "" as AnyObject
             }
         }
@@ -235,6 +244,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         surveyAnswers.append( answer )
         
         consoleLineSeparate()
+        print( surveyAnswers.count )
         print( surveyAnswers )
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
                 object: nil)

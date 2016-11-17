@@ -14,8 +14,14 @@ class CommentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        print( "loading the comment question" )
+        setupComment()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupComment() -> () {
+        nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
+                object: nil)
     }
 
     func textViewShouldReturn(_ textView: UITextView) -> Bool {

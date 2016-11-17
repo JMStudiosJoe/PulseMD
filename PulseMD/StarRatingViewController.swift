@@ -24,7 +24,7 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.floatRatingView.delegate = self
-        print ( "IM THE STAR RATING" )
+        
         setupRating()
         // Do any additional setup after loading the view.
     }
@@ -34,21 +34,6 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
         
         gestFloat.numberOfTapsRequired = 1
         
-        //floatRatingView.addGestureRecognizer(gestFloat)
-        
-        
-//        print ( starEmpty )
-//        print ( starFull )
-        //print ( self.floatRatingView )
-        
-//        self.floatRatingView.contentMode = UIViewContentMode.scaleAspectFit
-//        self.floatRatingView.maxRating = 5
-//        self.floatRatingView.minRating = 0
-//        
-//        self.floatRatingView.editable = true
-//        self.floatRatingView.rating = 0.0
-//        self.floatRatingView.emptyImage = UIImage(named: "Pulse.StarScreen.FilledStar.png")
-//        self.floatRatingView.fullImage = UIImage(named: "Pulse.StarScreen.EmptyStar.png")
         
     }
     
@@ -56,24 +41,7 @@ class StarRatingViewController: UIViewController, FloatRatingViewDelegate {
     {
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
                 object: nil)
-//        nextButtonToggle = false
-//        if(nextButtonToggle == true)
-//        {
-//            
-//            nextButton.fadeIn()
-//        }
-//        else
-//        {
-//            nextButtonToggle = true
-//            if(fireOnlyOnce)
-//            {
-//                fireOnlyOnce = false
-//                selectedRating = floatRating.rating
-//                makeAnswerObjectWithCorrectTypeAndStore()
-//            }
-//            
-//            
-//        }
+
         
     }
     

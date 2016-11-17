@@ -12,8 +12,8 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
 
     var JMSdelegate : JMSurveyQuestionsPresentationDelegate?
     var selectedProviderPassedImage : UIImage?
-    var selectedProviderFirstName : String?
-    var selectedProviderLastName : String?
+    var selectedProviderFirstName : String!
+    var selectedProviderLastName : String!
     var selectedProviderDescription : String?
     
     @IBOutlet weak var providerImage: UIImageView!
@@ -33,11 +33,11 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         
         if(creds == "." || creds == "")
         {
-            lastName.text = selectedProviderLastName!
+            lastName!.text = selectedProviderLastName!
         }
         else
         {
-            lastName.text = "\(selectedProviderLastName!), \(creds)"
+            lastName!.text = "\(selectedProviderLastName!), \(creds)"
         }
         if(spec == "." || spec == "")
         {
@@ -48,7 +48,7 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
             providerDescription.text = spec
         }
         
-        firstName.text = selectedProviderFirstName!
+        firstName!.text = selectedProviderFirstName!
 
         yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
         noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())

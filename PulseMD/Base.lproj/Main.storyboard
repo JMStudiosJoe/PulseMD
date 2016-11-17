@@ -155,6 +155,8 @@
                     </view>
                     <connections>
                         <segue destination="tPx-de-Xqw" kind="unwind" unwindAction="backToMain:sender:" id="cVJ-jw-NFI"/>
+                        <segue destination="tPx-de-Xqw" kind="unwind" unwindAction="backToMain:sender:" id="Iry-dE-bhj"/>
+                        <segue destination="tsj-4T-bHo" kind="show" identifier="backToMain" id="9Cz-E1-fnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5X-vd-gkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -501,7 +503,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ie8-DB-F8g">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="421" id="UdT-ZT-d3O"/>
+                                    <constraint firstAttribute="height" constant="321" id="UdT-ZT-d3O"/>
                                     <constraint firstAttribute="width" constant="948" id="mvv-Fi-z1l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -769,4 +771,7 @@
         <image name="Pulse.StarScreen.FilledStar" width="176" height="200"/>
         <image name="or" width="79" height="356"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Cz-E1-fnd"/>
+    </inferredMetricsTieBreakers>
 </document>
