@@ -19,15 +19,27 @@ protocol JMSurveyQuestionsPresentationDelegate
 class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentationDelegate {
 
     //question container
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var surveyQuestionContainer: UIView!
     @IBOutlet weak var nextButton: UIButton!   //just next is a reserve word or something
     @IBOutlet weak var questionText: UITextView!
     
+    var blurEffect : UIBlurEffect?
     var blurEffectView : UIVisualEffectView?
     
+    override func viewWillAppear(_ animated: Bool) {
+        backgroundImage.image = UIImage(named: "background.without the white.png")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        //self.navigationController?.isNavigationBarHidden = true
+        blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView!.frame = view.bounds
+        blurEffectView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         nc.addObserver(forName:Notification.Name(rawValue:"nextButtonFadeIn"),
                        object:nil, queue:nil,
@@ -38,6 +50,12 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         nc.addObserver(forName:Notification.Name(rawValue:"surveyAnswerCreation"),
                        object:nil, queue:nil,
                        using:surveyAnswerCreation)
+        nc.addObserver(forName:Notification.Name(rawValue:"addBlur"),
+                       object:nil, queue:nil,
+                       using:addBlur)
+        nc.addObserver(forName:Notification.Name(rawValue:"removeBlur"),
+                       object:nil, queue:nil,
+                       using:removeBlur)
 
         startSurvey()
         //surveyAnswerCreation
@@ -181,8 +199,17 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         viewController.didMove(toParentViewController: self)
     }
     
+    func addBlur(notification:Notification) -> Void {
+        print("adding blur view")
+        self.view.addSubview(blurEffectView!)
+    }
+    func removeBlur(notification:Notification) -> Void {
+        print("removing blur view")
+        self.blurEffectView!.removeFromSuperview()
+    }
+    
     func removeBlur() {
-        self.blurEffectView?.removeFromSuperview()
+        
     }
     
     func makeAnswerObjectWithCorrectTypeAndStore() {

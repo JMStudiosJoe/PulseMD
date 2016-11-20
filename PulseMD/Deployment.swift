@@ -20,7 +20,8 @@ class Deployment: PFObject {
 extension Deployment {
     static func fetchDeployment() {
         let query = Deployment.query()!
-        query.whereKey("deviceName", equalTo: UIDevice.current.name)
+        //query.whereKey("deviceName", equalTo: UIDevice.current.name)
+        query.whereKey("deviceName", equalTo: "iPad")
         query.getFirstObjectInBackground {(object, error) in
             if let error = error {
                 print ( error )

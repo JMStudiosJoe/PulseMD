@@ -33,7 +33,7 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         
         if(creds == "." || creds == "")
         {
-            lastName!.text = selectedProviderLastName!
+            lastName!.text = selectedProviderLastName
         }
         else
         {
@@ -48,7 +48,7 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
             providerDescription.text = spec
         }
         
-        firstName!.text = selectedProviderFirstName!
+        firstName!.text = selectedProviderFirstName
 
         yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
         noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())
@@ -63,7 +63,9 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         makeAnswerObjectWithCorrectTypeAndStore()
         nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
                 object: nil)
-        removeBlur()
+        
+        nc.post(name:Notification.Name(rawValue:"removeBlur"),
+                object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -71,7 +73,9 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
     {
         noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())
         yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
-        removeBlur()
+        
+        nc.post(name:Notification.Name(rawValue:"removeBlur"),
+                object: nil)
         
         self.dismiss(animated: true, completion: nil)
     }
@@ -79,7 +83,9 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         JMSdelegate!.makeAnswerObjectWithCorrectTypeAndStore()
     }
     func removeBlur() {
-        JMSdelegate!.removeBlur()
+        
+        nc.post(name:Notification.Name(rawValue:"removeBlur"),
+                object: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -73,8 +73,10 @@ class ProvidersViewController: UIViewController, UICollectionViewDelegate, UICol
     {
         
         selectedProvider = surveyProviders![indexPath.row]
-//        
-//        self.view.addSubview(blurEffectView!)
+
+        nc.post(name:Notification.Name(rawValue:"addBlur"),
+                object: nil)
+
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProviderSelectedViewController") as! ProviderSelectedViewController
         vc.modalPresentationStyle = .popover
         vc.preferredContentSize = CGSize(width: 500, height: 320)

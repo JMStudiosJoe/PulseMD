@@ -10,13 +10,27 @@ import UIKit
 
 class LandingPageViewController: UIViewController {
 
+    @IBOutlet weak var locationDisplay: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var surveyImage: UIImageView!
+    @IBOutlet weak var surveyTitle: UILabel!
+    @IBOutlet weak var surveyMainInfo: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        backgroundImage.image = UIImage(named: "background.without the white.png")
+        surveyTitle.text = deployedSurvey?.name!
+        locationDisplay.text = deployedLocation?.name!
+        self.navigationController?.navigationBar.isHidden = true
+        self.prefersStatusBarHidden
+        
+        surveyMainInfo.layer.cornerRadius = 10
+        surveyMainInfo.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 
     @IBAction func startSurvey(_ sender: AnyObject) {
+        print("STARTING SURVEY")
         performSegue(withIdentifier: "startSurvey", sender: self)
     }
     @IBAction func backToMain(_ segue: UIStoryboardSegue, sender: AnyObject!)
