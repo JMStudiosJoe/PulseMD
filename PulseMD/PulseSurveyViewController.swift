@@ -91,7 +91,10 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     @IBAction func nextQuestion(_ sender: AnyObject) {
         
         self.surveyQuestionContainer.slideOut()
-        self.questionText.slideOut()
+        self.surveyQuestionContainer.fadeOut()
+        
+        self.questionText.fadeOut()
+        
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
                 object: nil)
         if( deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text" ||
@@ -105,8 +108,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         
         incrementSurveyIndex()
         
-        self.questionText.fadeOut()
-        self.surveyQuestionContainer.fadeOut()
+        self.questionText.text = deployedSurveyQuestions?[currentSurveyQuestionIndex].question
 
     }
     
@@ -176,6 +178,8 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         else if ( currentQuestion.type == "nps_rating" ) {
             self.addViewControllerAsChildViewController(viewController: NPSRatingViewController)
         }
+        
+        self.questionText.text = currentQuestion.question
         self.questionText.fadeIn()
         self.surveyQuestionContainer.fadeIn()
     }
