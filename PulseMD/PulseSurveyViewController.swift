@@ -24,16 +24,22 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     @IBOutlet weak var nextButton: UIButton!   //just next is a reserve word or something
     @IBOutlet weak var questionText: UITextView!
     
+    var fireOnce: Bool!
+    
     var blurEffect : UIBlurEffect?
     var blurEffectView : UIVisualEffectView?
     
     override func viewWillAppear(_ animated: Bool) {
         backgroundImage.image = UIImage(named: "background.without the white.png")
+        let backgroundBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let backgroundBlurView = UIVisualEffectView(effect: backgroundBlurEffect)
+        backgroundBlurView.frame = CGRect(x: 0, y: 0, width: 3000, height: 3000)
+        backgroundImage.addSubview(backgroundBlurView)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        fireOnce = true
         
         //self.navigationController?.isNavigationBarHidden = true
         blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
@@ -64,7 +70,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     //MARK: Next button event handlers for when user selects an answer to fade in the next button and fade it out
     func nextButtonFadeIn(notification:Notification) -> Void {
-        
+        fireOnce = true
         nextButton.fadeIn()
         
     }
@@ -90,25 +96,28 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     @IBAction func nextQuestion(_ sender: AnyObject) {
         
-        self.surveyQuestionContainer.slideOut()
-        self.surveyQuestionContainer.fadeOut()
-        
-        self.questionText.fadeOut()
-        
-        nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
-                object: nil)
-        if( deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text" ||
-            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text_area" ||
-            deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "email") {
+        if( fireOnce == true ) {
+            fireOnce = false
+            self.surveyQuestionContainer.slideOut()
+            self.surveyQuestionContainer.fadeOut()
             
+            self.questionText.fadeOut()
             
-            nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+            nc.post(name:Notification.Name(rawValue:"nextButtonFadeOut"),
                     object: nil)
+            if( deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text" ||
+                deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "text_area" ||
+                deployedSurveyQuestions?[currentSurveyQuestionIndex].type == "email") {
+                
+                
+                nc.post(name:Notification.Name(rawValue:"surveyAnswerCreation"),
+                        object: nil)
+            }
+            
+            incrementSurveyIndex()
+            
+            self.questionText.text = deployedSurveyQuestions?[currentSurveyQuestionIndex].question
         }
-        
-        incrementSurveyIndex()
-        
-        self.questionText.text = deployedSurveyQuestions?[currentSurveyQuestionIndex].question
 
     }
     
@@ -154,6 +163,8 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
         let currentQuestion: Question = deployedSurveyQuestions![ currentSurveyQuestionIndex ]
         
+        print(currentQuestion.type)
+        
         if ( currentQuestion.type == "star_rating" ) {
             self.addViewControllerAsChildViewController(viewController: StarRatingViewController)
         }
@@ -166,7 +177,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         else if ( currentQuestion.type == "text" ) {
             self.addViewControllerAsChildViewController(viewController: ShortAnswerViewController)
         }
-        else if ( currentQuestion.type == "email" ) {
+        else if ( currentQuestion.type == "text_email" ) {
             self.addViewControllerAsChildViewController(viewController: EmailQuestionViewController)
         }
         else if ( currentQuestion.type == "yes_no" ) {
@@ -246,7 +257,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
                 selection = "" as AnyObject
             }
         }
-        else if ( currentQuestion.type == "email" ) {
+        else if ( currentQuestion.type == "text_email" ) {
             
             if( emailResponse != nil ) {
                 selection = emailResponse as AnyObject

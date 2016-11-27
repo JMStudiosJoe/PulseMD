@@ -14,7 +14,8 @@ class EmailQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
+                object: nil)
         // Do any additional setup after loading the view.
     }
     
