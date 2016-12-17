@@ -23,24 +23,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MokiManageDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Parse.enableLocalDatastore()
-        IQKeyboardManager.sharedManager().enable = true
-        // Initialize Parse.
-        surveyProviderImages = []
-        surveyAnswers = []
-        multiChoiceAvalableAnswers = []
-        let err: NSErrorPointer = nil
+        var err: NSError? = nil
         MokiManage.sharedManager().delegate = self
+        print( self )
+        print( MokiManage() )
         //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, enableASM: true, enableAEM: true, asmSettingsFileName: "SettingsSchema.json", error: nil)
         
         
-        //MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, error: err)
+        MokiManage.sharedManager().initialize(withApiKey: APP_KEY, launchingOptions: launchOptions, error: &err)
         
         Parse.setApplicationId("KPiWhoD68L6zYIRHEBnfebYlopbvzc64dd2wzENa",
                                clientKey: "1pjkH1AsWjCvf2st0SQB5MjLb5sMuYmNxMnKigRd")
 
 
+        
+        
+        IQKeyboardManager.sharedManager().enable = true
+        // Initialize Parse.
+        surveyProviderImages = []
+        surveyAnswers = []
+        multiChoiceAvalableAnswers = []
         configureParse()
         Deployment.fetchDeployment()
+        
+        
         
         
         return true

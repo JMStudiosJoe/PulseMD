@@ -82,8 +82,8 @@ class ProvidersViewController: UIViewController, UICollectionViewDelegate, UICol
         vc.preferredContentSize = CGSize(width: 500, height: 320)
         vc.selectedProviderPassedImage = surveyProviderImages![(indexPath as NSIndexPath).row]
         vc.JMSdelegate = self
-        let fname = String(describing: selectedProvider!["firstName"])
-        let lname = String(describing: selectedProvider!["lastName"])
+        let fname = selectedProvider!["firstName"] as! String
+        let lname = selectedProvider!["lastName"] as! String
         if(fname == "." || fname.isEmpty)
         {
             vc.selectedProviderFirstName = " "

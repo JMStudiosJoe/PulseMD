@@ -33,7 +33,8 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         
         if(creds == "." || creds == "")
         {
-            lastName!.text = selectedProviderLastName
+            print(selectedProviderLastName)
+            lastName!.text = selectedProviderLastName!
         }
         else
         {
@@ -47,8 +48,8 @@ class ProviderSelectedViewController: UIViewController, JMSurveyQuestionsPresent
         {
             providerDescription.text = spec
         }
-        
-        firstName!.text = selectedProviderFirstName
+        print( selectedProviderFirstName )
+        firstName!.text = selectedProviderFirstName!
 
         yesButton.setBackgroundImage(UIImage(named: "small.yes.png"), for: UIControlState())
         noButton.setBackgroundImage(UIImage(named: "small.no.png"), for: UIControlState())

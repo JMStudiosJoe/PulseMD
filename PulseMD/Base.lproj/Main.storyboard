@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -61,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deviceName" destination="WIM-Uh-ffp" id="90I-FL-C7K"/>
                         <segue destination="tsj-4T-bHo" kind="show" identifier="landingPage" id="Kva-vq-JQT"/>
                     </connections>
                 </viewController>
@@ -118,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="237" id="g90-KV-2Ar"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oni-f7-73h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="oni-f7-73h">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="1O4-Du-7VV"/>
                                     <constraint firstAttribute="width" constant="120" id="xEm-nn-xDw"/>
@@ -194,22 +195,28 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-JN-opL"/>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WpT-TG-xRQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" editable="NO" text="who" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WpT-TG-xRQ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="4vi-5G-3eE"/>
+                                    <constraint firstAttribute="height" constant="100" id="4vi-5G-3eE"/>
                                     <constraint firstAttribute="width" constant="833" id="ce0-sZ-xYq"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AIV-D9-Nmn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="833" id="28F-ZP-TCd"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="LYz-vX-2ut" secondAttribute="leading" constant="20" id="5mj-H3-OIe"/>
-                            <constraint firstItem="WpT-TG-xRQ" firstAttribute="top" secondItem="0M3-me-bhv" secondAttribute="bottom" constant="-1" id="5t5-BG-ykv"/>
+                            <constraint firstItem="WpT-TG-xRQ" firstAttribute="top" secondItem="0M3-me-bhv" secondAttribute="bottom" constant="29" id="5t5-BG-ykv"/>
                             <constraint firstItem="LYz-vX-2ut" firstAttribute="centerX" secondItem="pTe-vO-qWc" secondAttribute="centerX" id="6PL-E4-drR"/>
                             <constraint firstItem="Qh7-CK-WVZ" firstAttribute="top" secondItem="4f1-JH-ubE" secondAttribute="bottom" constant="8" id="7Ge-yj-Tto"/>
+                            <constraint firstItem="AIV-D9-Nmn" firstAttribute="centerX" secondItem="pTe-vO-qWc" secondAttribute="centerX" id="81G-U8-c1y"/>
                             <constraint firstItem="WpT-TG-xRQ" firstAttribute="centerX" secondItem="pTe-vO-qWc" secondAttribute="centerX" id="D1Y-as-u5F"/>
                             <constraint firstItem="Qh7-CK-WVZ" firstAttribute="top" secondItem="LYz-vX-2ut" secondAttribute="bottom" constant="20" id="GhD-fz-3hJ"/>
                             <constraint firstItem="P5v-JN-opL" firstAttribute="centerX" secondItem="pTe-vO-qWc" secondAttribute="centerX" id="Jwh-7u-NpS"/>
@@ -222,11 +229,13 @@
                             <constraint firstItem="P5v-JN-opL" firstAttribute="leading" secondItem="pTe-vO-qWc" secondAttribute="leadingMargin" id="kcz-n2-1Gc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LYz-vX-2ut" secondAttribute="trailing" constant="-20" id="law-8P-ce3"/>
                             <constraint firstItem="4f1-JH-ubE" firstAttribute="centerX" secondItem="pTe-vO-qWc" secondAttribute="centerX" id="sZr-sp-aPC"/>
+                            <constraint firstItem="AIV-D9-Nmn" firstAttribute="top" secondItem="0M3-me-bhv" secondAttribute="bottom" constant="19" id="vmj-v0-jPc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="LYz-vX-2ut" id="NBc-0K-AXt"/>
                         <outlet property="nextButton" destination="4f1-JH-ubE" id="hcE-6O-mj5"/>
+                        <outlet property="progressBar" destination="AIV-D9-Nmn" id="Rqc-uw-S3q"/>
                         <outlet property="questionText" destination="WpT-TG-xRQ" id="DFa-rX-uCU"/>
                         <outlet property="surveyQuestionContainer" destination="P5v-JN-opL" id="Gxr-nI-ydw"/>
                         <segue destination="XJS-pA-NXS" kind="show" identifier="endSurvey" id="WyQ-3f-ByG"/>
@@ -292,7 +301,7 @@
                                                         <constraint firstAttribute="width" constant="600" id="w0N-vB-blF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="40"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -860,6 +869,6 @@
         <image name="white_logo.png" width="503" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Cz-E1-fnd"/>
+        <segue reference="Kva-vq-JQT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,6 +19,7 @@ class LandingPageViewController: UIViewController {
         super.viewDidLoad()
 
         backgroundImage.image = UIImage(named: "background.without the white.png")
+        print( deployedSurvey )
         surveyTitle.text = deployedSurvey?.name!
         locationDisplay.text = deployedLocation?.name!
         self.navigationController?.navigationBar.isHidden = true

@@ -26,6 +26,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     
     var fireOnce: Bool!
     
+    @IBOutlet weak var progressBar: UIProgressView!
     var blurEffect : UIBlurEffect?
     var blurEffectView : UIVisualEffectView?
     
@@ -67,7 +68,14 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         //surveyAnswerCreation
         // Do any additional setup after loading the view.
     }
-    
+    func setProgressBar()
+    {
+        let f1 = Float( currentSurveyQuestionIndex )
+        let f2 = Float( deployedSurveyQuestions!.count )
+        
+        let progress = f1/f2
+        progressBar.setProgress(progress, animated: true)
+    }
     //MARK: Next button event handlers for when user selects an answer to fade in the next button and fade it out
     func nextButtonFadeIn(notification:Notification) -> Void {
         fireOnce = true

@@ -11,9 +11,10 @@ import SwiftSpinner
 
 class PulseLoadViewController: UIViewController {
 
-    @IBOutlet weak var questionContainer: UIView!
-    @IBOutlet weak var baseQuestionUIView: UIView!
+    //@IBOutlet weak var questionContainer: UIView!
+    //@IBOutlet weak var baseQuestionUIView: UIView!
     
+    @IBOutlet weak var deviceName: UILabel!
     var starsOrProviders: Bool = false
     override func viewWillAppear(_ animated: Bool) {
         //startLoadingScreen( message: "Preparing Your Application" )
@@ -25,7 +26,7 @@ class PulseLoadViewController: UIViewController {
                        object:nil, queue:nil,
         
                        using:applicationNowReady)
-        
+        deviceName.text = "\( UIDevice.current.name )"
         
     }
     
