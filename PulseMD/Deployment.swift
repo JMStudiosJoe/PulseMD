@@ -27,10 +27,13 @@ extension Deployment {
                 print ( error )
             }
             else if let object = object {
+                print(";;;")
+                print(object["healthcare"])
+                //let orgObject: HealthcareOrganization = object["healthcare"] as! HealthcareOrganization
                 
                 let surveyObject: Survey = object["survey"] as! Survey
                 let locationObject: Location = object["location"] as! Location
-                print( "Got to Deployment" )
+                print( ";;; Got to Deployment" )
                 Survey.fetchSurvey( objectId: surveyObject.objectId! )
                 Location.fetchLocation( objectId: locationObject.objectId! )
                 

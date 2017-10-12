@@ -18,7 +18,8 @@ let nc = NotificationCenter.default
 var deployedSurveyID: NSNumber?
 var deployedSurvey: Survey?
 var deployedSurveyQuestions: [Question]?
-var deployedLocation: Location?
+var deployedLocation: Location!
+var deployedOrganization: HealthcareOrganization!
 var surveyProviders: [Provider]?
 var surveyProviderImages: [UIImage]?
 
@@ -33,17 +34,20 @@ func delay(_ delay:Double, closure:@escaping ()->())// http://stackoverflow.com/
 func consoleLineSeparate() {
     print ( "\n---------------------------------------\n" )
 }
-
+let reachability = Reachability()
 func checkInternetConnection() -> Bool
 {
     do {
-        let reachability = Reachability()
-        if(reachability.isReachable())
-        {
+        
+        print( reachability )
+        consoleLineSeparate()
+        print( reachability.isReachable )
+        consoleLineSeparate()
+        print( reachability.isReachable())
+        if reachability.isReachable() {
             return true
         }
-        else
-        {
+        else {
             return false
         }
     }

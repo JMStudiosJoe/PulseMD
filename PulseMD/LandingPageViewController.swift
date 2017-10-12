@@ -24,7 +24,12 @@ class LandingPageViewController: UIViewController {
         locationDisplay.text = deployedLocation?.name!
         self.navigationController?.navigationBar.isHidden = true
         self.prefersStatusBarHidden
-        
+        do {
+            surveyImage.image = ( try UIImage( data: (deployedSurvey!.logo?.getData())! ) )
+        }
+        catch _ {
+            print("Error getting survey image")
+        }
         surveyMainInfo.layer.cornerRadius = 10
         surveyMainInfo.clipsToBounds = true
         // Do any additional setup after loading the view.

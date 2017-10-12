@@ -10,7 +10,7 @@ import Foundation
 import Parse
 
 class Location: PFObject {
-    @NSManaged var identifier: String?
+    @NSManaged var identifier: Int
     @NSManaged var name: String?
     @NSManaged var address: String?
     @NSManaged var city: String?

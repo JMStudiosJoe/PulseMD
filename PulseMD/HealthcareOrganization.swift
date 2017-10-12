@@ -18,28 +18,31 @@ class HealthcareOrganization: PFObject, PFSubclassing {
         return "HealthcareOrganization"
     }
     
+    
+    static func fetchHealthcareOrg(objectId: String) {
+        let query = HealthcareOrganization.query()!
+        query.whereKey("objectId", equalTo: objectId)
+        query.findObjectsInBackground {( objects: [PFObject]?, error: Error? ) -> Void in
+            
+            if error == nil
+            {
+                if let objects = objects {
+                    print( "Got to HealthcareOrganization" )
+                    print( objects )
+                    let org = objects[0] as! HealthcareOrganization
+                    deployedOrganization = org
+                    print( deployedLocation )
+                    
+                }
+            }
+            else
+            {
+                // Log details of the failure
+                print("Error: \(error!)")
+            }
+        }
+    }
+
+    
 }
-extension HealthcareOrganization {
-//    static func fetchLocation(objectId: String) {
-//        let query = HealthcareOrganization.query()!
-//        query.whereKey("objectId", equalTo: objectId)
-//        query.findObjectsInBackground {( objects: [PFObject]?, error: Error? ) -> Void in
-//            
-//            if error == nil
-//            {
-//                if let objects = objects {
-//                    print( "Got to HealthcareOrganization" )
-//                    let location = objects[0] as! Location
-//                    deployedLocation = location
-//                    print( deployedLocation )
-//                    Provider.fetchProviders( location: location )
-//                }
-//            }
-//            else
-//            {
-//                // Log details of the failure
-//                print("Error: \(error!)")
-//            }
-//        }
-//    }
-}
+

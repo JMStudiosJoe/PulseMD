@@ -22,6 +22,8 @@ class PulseLoadViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
+        self.prefersStatusBarHidden
         nc.addObserver(forName:Notification.Name(rawValue:"applicationReady"),
                        object:nil, queue:nil,
         

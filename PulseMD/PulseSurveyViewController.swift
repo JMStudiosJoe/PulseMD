@@ -63,6 +63,9 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         nc.addObserver(forName:Notification.Name(rawValue:"removeBlur"),
                        object:nil, queue:nil,
                        using:removeBlur)
+        
+        self.navigationController?.isNavigationBarHidden = true
+        self.prefersStatusBarHidden
 
         startSurvey()
         //surveyAnswerCreation
@@ -154,6 +157,7 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
     }
     func determinQuestionType() {
         
+        setProgressBar()
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         let StarRatingViewController = storyboard.instantiateViewController(withIdentifier: "StarRatingViewController") as! StarRatingViewController
@@ -293,9 +297,6 @@ class PulseSurveyViewController: UIViewController, JMSurveyQuestionsPresentation
         let answer: Answer = Answer( questionId: id, text: text, type: currentQuestion.type!, selection: selection )
         surveyAnswers.append( answer )
         
-        consoleLineSeparate()
-        print( surveyAnswers.count )
-        print( surveyAnswers )
         nc.post(name:Notification.Name(rawValue:"nextButtonFadeIn"),
                 object: nil)
         

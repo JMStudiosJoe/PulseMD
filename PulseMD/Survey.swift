@@ -10,7 +10,7 @@ import Foundation
 import Parse
 
 class Survey: PFObject, PFSubclassing {
-    @NSManaged var identifier: String?
+    @NSManaged var identifier: Int
     @NSManaged var name: String?
     @NSManaged var thankYouMessage: String?
     @NSManaged var updated: CFBoolean?
@@ -37,7 +37,10 @@ extension Survey {
                 print ( error )
             }
             else if let object = object {
-                print( "Got to Survey" )
+                consoleLineSeparate()
+                print( "SURVEY IS" )
+                print( object )
+                deployedSurvey = object as! Survey
                 let relation: PFRelation<PFObject> = object["questions"] as! PFRelation<PFObject>
                 Question.fetchSurveyQuestions( rel: relation )
             }
